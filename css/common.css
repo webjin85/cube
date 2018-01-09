@@ -132,13 +132,27 @@ img { vertical-align: top; }
 #section2 .exchanges_list li img { width: 100%; height: auto; }
 
 /* section3 */
-#section3 { background: #142130; }
+#section3 { background: #1d3259; }
 #section3 .content { padding: 120px 0; }
 #section3 .sec_title { letter-spacing: .5px; color: #fff; }
-#section3 .Whitepaper_list { overflow: hidden; }
+#section3 .Whitepaper_list { overflow: hidden; margin-top: 59px; }
 #section3 .Whitepaper_list li { float: left; width: 23.5%; margin-right: 2%; }
 #section3 .Whitepaper_list li:last-child { margin-right: 0; }
+#section3 .Whitepaper_list .img { position: relative; }
+#section3 .Whitepaper_list .img p { position: absolute; bottom: 24px; left: 0; width: 100%; text-align: center; }
 #section3 .Whitepaper_list img { width: 100%; height: auto; }
+#section3 .Whitepaper_list .btn_wrap { text-align: center; margin-top: 18px; }
+#section3 .Whitepaper_list .btn_wrap a { display: inline-block; padding: 6px; }
+#section3 .Whitepaper_list .btn_wrap a:hover { text-decoration: underline; }
+
+/* section4 */
+#section4 .content { padding: 120px 0; }
+#section4 .sec_title { letter-spacing: .5px; color: #102131; }
+#section4 .Team_list { overflow: hidden; }
+#section4 .Team_list li { float: left; width: 47.3%; margin-right: 5.4%; }
+#section4 .Team_list li:nth-child(2n+2) { margin-right: 0; }
+#section4 .Team_list .profile img { width: 120px; height: 120px; }
+
 
 /* 공통 */
 .content { position: relative; width: 1152px; margin: 0 auto; }
