@@ -39,7 +39,7 @@ img { vertical-align: top; }
           box-sizing: border-box;}
 
 /* 전체 메뉴 */
-#menu { position: fixed; top: 0; left: 0; z-index: 9990; width: 100%; height: 120px; background: #fff; }
+#menu { position: fixed; top: 0; left: 0; z-index: 9990; width: 100%; height: 120px; }
 #menu .content { height: 120px; padding: 48px 0 36px 0; }
 #menu .title { overflow: hidden; float: left; width: 120px; height: 36px; background: url('../img/logo-cube-white.png') no-repeat 0 center; background-size: 100% auto; font-size: 1px; text-indent: -1000px; }
 #menu .nav { overflow: hidden; float: right; }
@@ -148,11 +148,40 @@ img { vertical-align: top; }
 /* section4 */
 #section4 .content { padding: 120px 0; }
 #section4 .sec_title { letter-spacing: .5px; color: #102131; }
-#section4 .Team_list { overflow: hidden; }
-#section4 .Team_list li { float: left; width: 47.3%; margin-right: 5.4%; }
-#section4 .Team_list li:nth-child(2n+2) { margin-right: 0; }
-#section4 .Team_list .profile img { width: 120px; height: 120px; }
+#section4 .sec_title + .sub_sec_title { margin-top: 80px; }
+#section4 .team_list { overflow: hidden; margin-top: 64px; }
+#section4 .team_list li { float: left; width: 30.7%; margin-right: 3.95%; }
+#section4 .team_list li:nth-child(3n+3) { margin-right: 0; }
+#section4 .team_list .profile { position: relative; padding: 24px 0 24px 101px; }
+#section4 .team_list .profile .photo { position: absolute; top: 0; left: 0; width: 80px; height: 80px; 
+	-webkit-border-radius: 40px;
+	-moz-border-radius: 40px;
+	-ms-border-radius: 40px;
+	border-radius: 40px;
+}
+#section4 .team_list .name { line-height: 32px; }
+#section4 .team_list .sns { display: inline-block; width: 32px; height: 32px; margin-left: 8px; vertical-align: top; }
+#section4 .team_list .sns img { width: 100%; height: auto; }
+#section4 .team_list .flag { overflow: hidden; height: 24px; margin: 16px 0; }
+#section4 .team_list .flag li { float: left; width: auto; margin-right: 16px; }
+#section4 .team_list .flag li img { width: auto; height: 24px; }
+#section4 .sub_title.lite { color: #677897; }
+#section4 .sub_sec_title + .sub_title.lite { margin-top: 64px; }
+#section4 .dot_list { color: #677897; }
 
+/* section5 */
+#section5 .content { padding: 120px 0; }
+#section5 .sec_title { letter-spacing: .5px; color: #102131; }
+#section5 .faq_list { margin-top: 80px; }
+#section5 .faq_list .title { position: relative; display: block; width: 100%; height: 64px; padding: 0 16px; border: none; border-bottom: 1px solid rgba(0, 0, 0, .16); background: none; line-height: 64px; text-align: left; cursor: pointer; font-size: 18px; letter-spacing: -.2px; color: rgba(0, 0, 0, .87);}
+#section5 .faq_list .title:after { content: ''; position: absolute; top: 50%; right: 20px; width: 16px; height: 2px; margin-top: -1px; background: rgba(0, 0, 0, .6); }
+#section5 .faq_list .title:before { content: ''; position: absolute; top: 50%; right: 27px; width: 2px; height: 16px; margin-top: -8px;  background: rgba(0, 0, 0, .6); }
+#section5 .faq_list .cont { display: none; padding: 32px 16px; }
+
+#section5 .asSeenOn_list { overflow: hidden; margin-top: 64px; padding: 0 5%; }
+#section5 .asSeenOn_list li { float: left; margin-right: 6.5%; }
+#section5 .asSeenOn_list li:last-child { margin-right: 0; }
+#section5 .asSeenOn_list li img { width: auto; height: 80px; }
 
 /* 공통 */
 .content { position: relative; width: 1152px; margin: 0 auto; }
@@ -211,3 +240,4 @@ img { vertical-align: top; }
 .fRight { float: right; }
 
 .fc1 { color: #fff; } /* 흰색 */
+.line30 { line-height: 30px; }
