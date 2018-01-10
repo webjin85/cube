@@ -29,6 +29,16 @@ if(navigator.platform) {
 		//alert('pc 접속');
 	}
 };
+
+$(window).on('scroll', function(e) {
+	var s = $(window).scrollTop();
+
+	if(s > 70) {
+		$('#menu').addClass('on');
+	} else {
+		$('#menu').removeClass('on');
+	}
+})
 </script>
 </head>
 <body>
@@ -788,6 +798,8 @@ if(navigator.platform) {
 							<p>Lee received a Ph.D. in Physics from Yonsei University. Since then, he had worked as a researcher at the Brain Science Institute at KAIST. Dr. Lee worked as a researcher at ETRI, and for 15 years Dr. Lee worked for the next generation technology team at Samsung Electronics central research institute. Dr. Lee has worked on the Artificial Intelligence team and is currently in charge of CUBE's AI development.</p>
 						</div>
 					</li>
+				</ul>
+				<ul class="team_list">
 					<li>
 						<div class="profile">
 							<img src="img/Ryan Park.png" alt="" class="photo">
@@ -829,6 +841,8 @@ if(navigator.platform) {
 							<p>Author (Motoring the Future: VW and Toyota Vying for Pole Position) Speaker at a broad range of events in the automotive industry (concepts for alternative engines and their costs, developments and innovation in the industry)</p>
 						</div>
 					</li>
+				</ul>
+				<ul class="team_list">
 					<li>
 						<div class="profile">
 							<img src="img/Dr. Andreas Roggon.png" alt="" class="photo">
@@ -873,6 +887,8 @@ if(navigator.platform) {
 							<p>International automotive supplier: design and implementation of a potential development and a Management training program.</p>
 						</div>
 					</li>
+				</ul>
+				<ul class="team_list">
 					<li>
 						<div class="profile">
 							<img src="img/Balakrishnan.png" alt="" class="photo">
@@ -913,6 +929,8 @@ if(navigator.platform) {
 							<p>Hyesun Lee majored in art at Sookmyung Women's University and graduated with a master's degree in design from UCLA. She has developed the overall design in CUBE.</p>
 						</div>
 					</li>
+				</ul>
+				<ul class="team_list">
 					<li>
 						<div class="profile">
 							<img src="img/Yoon Jae Song.png" alt="" class="photo">
@@ -993,6 +1011,8 @@ if(navigator.platform) {
 							<p>Dr.Park has been the professor in Seoul National University, and KAIST in Korea. He also worked as an key engineer of Delphi. Managed the Technical Center of Automotive Product Systems. Developed electronic controlled automotive components such as Smart Airbag, Suspension, Electric Power Steering. ABS, Sensors, EMS-ECU (Engine Management System-Electronic Control Unit), and HVAC System</p>
 						</div>
 					</li>
+				</ul>
+				<ul class="team_list">
 					<li>
 						<div class="profile">
 							<img src="img/Jae Kim.png" alt="" class="photo">
@@ -1034,6 +1054,8 @@ if(navigator.platform) {
 							<p>He has studied at Stanford Graduate School of Business and Seoul National University. He has served as a researcher at Daewoo Research Institute, worked as a credit analyst at UBAF Bank, and also as a fund manager at KDIM. He is running a venture capital, became a CEO of Adval Capital and has invested in more than 70 start-up companies. He also acts as an advisor to the Innobiz Association.</p>
 						</div>
 					</li>
+				</ul>
+				<ul class="team_list">
 					<li>
 						<div class="profile">
 							<img src="img/Richard Biggs.png" alt="" class="photo">
@@ -1057,30 +1079,51 @@ if(navigator.platform) {
 					<li>10M units with $300M revenue achieved for four years in the brand name of XROAD.</li>
 					<li>Got the “Best Worldwide Automotive Invention Prize” from Frost & Sullivan.</li>
 				</ul>
-				<ul class="img_list">
-					<li></li>
-					<li></li>
-					<li></li>
-				</ul>
+
+				<div class="img_list">
+					<img src="img/img-team-1.png" class="pc" alt="">
+					<ul>
+						<li>
+							<img src="img/img-team-1_1.png" alt="">
+							<p>Hanover, Germany</p>
+						</li>
+						<li>
+							<img src="img/img-team-1_2.png" alt="">
+							<p>Tokyo, Japan</p>
+						</li>
+						<li>
+							<img src="img/img-team-1_3.png" alt="">
+							<p>CUBE, XROAD Chairman Bong Lee, Ph.D.</p>
+						</li>
+					</ul>
+				</div>
 
 				<h4 class="sub_title lite">Carsharing IOT Platform</h4>
 				<p class="line30">CUBE team had founded Greencar car-sharing, and developed the whole system and operated successfully.The team sold the company when the number of the car reached 700 cars. Now Lotte owns the company. The number of the car is over 5,000 and market cap is over 300 M USD. Cube team is developing the cryptography part, which will prevent the hacker to manipulate the car-sharing or self-driving car remotely by using blockchain technology.</p>
-				<ul class="img_list">
-					<li></li>
-					<li></li>
-					<li></li>
-				</ul>
+				<div class="img_list">
+					<img src="img/img-team-2.png" class="pc" alt="">
+					<ul>
+						<li>
+							<img src="img/img-team-2_1.png" alt="">
+							<p>Greencar owns 5,000 cars in Korea</p>
+						</li>
+						<li>
+							<img src="img/img-team-2_2.png" alt="">
+							<p>Over 10M users</p>
+						</li>
+						<li>
+							<img src="img/img-team-2_3.png" alt="">
+							<p>CUBE Chairman Bong Lee,<br>Ph.D. founded Greencar</p>
+						</li>
+					</ul>
+				</div>
 
 				<h3 class="sub_sec_title">CUBE Conference</h3>
-				<ul class="img_list">
-					<li></li>
-					<li></li>
-					<li></li>
-				</ul>
-
-				<div class="comment">
-					<p>The recent appearance of self-driving cars is expected to make our lives easier. But at the same time, this new technology is vulnerable to malicious attacks through the networks used. CUBE will protect drivers from these attacks. I believe that the dedication of our team members will bring good results. I encourage you to join us in making this world better.</p>
-					<p class="name">Philip Lee, CEO</p>
+				<div class="img_list">
+					<img src="img/img-team-3.png" class="pc" alt="">
+					<ul>
+						<li><img src="img/img-team-3_1.png" alt=""></li>
+					</ul>
 				</div>
 			</div>
 		</div>
