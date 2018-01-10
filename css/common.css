@@ -80,6 +80,7 @@ img { vertical-align: top; }
 #section_main img { width: 884px; height: 400px; margin-left: -64px; }
 
 /* section1_What We Do */
+#section1 { background: url('../img/bg-sub-1.png') no-repeat 0 9%, url('../img/bg-sub-2.png') no-repeat 100% 38%; background-size: 576px auto, 700px auto; }
 #section1 .content { padding: 120px 0; }
 #section1 .sec_title { letter-spacing: .5px; color: #102131; }
 #section1 .video_wrap { position: relative; width: 622px; height: 350px; margin: 64px auto;
@@ -96,7 +97,7 @@ img { vertical-align: top; }
 #section1 .video_wrap .play { overflow: hidden; position: absolute; top: 50%; left: 50%; width: 80px; height: 80px; margin: -40px 0 0 -40px; background: url('../img/ico-play-80-fff.png') no-repeat 0 0; background-size: 80px; font-size: 1px; text-indent: -1000px; }
 #section1 .img1 { width: 608px; height: auto; margin: -42px -8px 0 0; }
 #section1 .img2 { width: 320px; height: auto; margin: 48px 0 0 83px; }
-#section1 .img3 { width: 540px; height: auto; margin-top: 101px; }
+#section1 .img3 { width: 540px; height: auto; margin: 101px -29px 0 0; }
 
 #section1 .subSection .graph .caption { display: block; font-size: 18px; line-height: 24px; text-align: center; }
 #section1 .subSection .graph .round { float: left; width: 508px; }
@@ -115,6 +116,13 @@ img { vertical-align: top; }
 	border-radius: 8px;
 }
 #section1 .subSection .desc_list li.current:before { background: #5194fd; }
+#section1 .btn { width: 284px; margin-top: 40px;
+ 	-webkit-box-shadow: 0 3px 10px 0 rgba(58, 134, 254, .45);
+ 	-moz-box-shadow: 0 3px 10px 0 rgba(58, 134, 254, .45);
+ 	-ms-box-shadow: 0 3px 10px 0 rgba(58, 134, 254, .45);
+ 	box-shadow: 0 3px 10px 0 rgba(58, 134, 254, .45);
+}
+#section1 .btn .flipper .button { width: 284px; }
 
 #section1 .market_table { overflow: hidden; margin-top: 64px; text-align: center; }
 #section1 .market_table dl { float: left; width: 50%; border-right: 1px solid rgba(0, 0, 0, .24); }
@@ -307,9 +315,29 @@ img { vertical-align: top; }
 	-ms-transform: rotateX(90deg) rotateZ(180deg) rotateY(180deg) translateZ(20px);
 	transform: rotateX(90deg) rotateZ(180deg) rotateY(180deg) translateZ(20px);
 }
+#overlay .top { overflow: hidden; display: block; position: absolute; top: 50%; right: -91px; width: 32px; height: 32px; margin-top: -16px; border: 1px solid rgba(255, 255, 255, .6); background: url('../img/arrow-top-24-fff.png') no-repeat center; background-size: 24px; font-size: 1px; text-indent: -1000px; 
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	-ms-border-radius: 4px;
+	border-radius: 4px;
+}
 
 /* side_nav */
-#side_nav { display: none; }
+#side_nav { position: fixed; top: 50%; left: 50%; display: block; width: 16px; margin: -138px 0 0 643px; padding-top: 108px; }
+#side_nav:after { content: ''; position: absolute; top: 0; left: 50%; width: 2px; height: 72px; margin-left: -1px; background: #3a86fe; }
+#side_nav li { overflow: hidden; width: 8px; height: 8px; margin: 16px auto; background: #d8d8d8; font-size: 1px; text-indent: -1000px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	-ms-border-radius: 4px;
+	border-radius: 4px;
+}
+#side_nav li.on { width: 16px; height: 16px; margin: -4px auto; background: #5194fd;
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	-ms-border-radius: 8px;
+	border-radius: 8px;
+}
+#side_nav li:first-child { margin-top: 0; }
 
 
 /* 공통 */
