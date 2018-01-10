@@ -78,20 +78,54 @@ img { vertical-align: top; }
 #section_main img { width: 884px; height: 400px; margin-left: -64px; }
 
 /* What We Do */
-#section1 .content { padding-top: 120px; }
+#section1 .content { padding: 120px 0; }
 #section1 .sec_title { letter-spacing: .5px; color: #102131; }
 #section1 .video_wrap { position: relative; width: 622px; height: 350px; margin: 64px auto;
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	-ms-border-radius: 8px;
+	border-radius: 8px;
 	-webkit-box-shadow: -8px 16px 50px 0px rgba(18, 107, 214, .5);
 	-moz-box-shadow: -8px 16px 50px 0px rgba(18, 107, 214, .5);
 	-ms-box-shadow: -8px 16px 50px 0px rgba(18, 107, 214, .5);
 	box-shadow: -8px 16px 50px 0px rgba(18, 107, 214, .5);
 }
+#section1 .video_wrap img { width: 100%; height: auto; }
 #section1 .video_wrap .play { overflow: hidden; position: absolute; top: 50%; left: 50%; width: 80px; height: 80px; margin: -40px 0 0 -40px; background: url('../img/ico-play-80-fff.png') no-repeat 0 0; background-size: 80px; font-size: 1px; text-indent: -1000px; }
-#section1 .img1 { width: 608px; height: 520px; margin: -42px -8px 0 0; vertical-align: top; }
-#section1 .img3 { width: 540px; height: 400px; margin-top: 101px; vertical-align: top; }
+#section1 .img1 { width: 608px; height: auto; margin: -42px -8px 0 0; }
+#section1 .img2 { width: 320px; height: auto; margin: 48px 0 0 83px; }
+#section1 .img3 { width: 540px; height: auto; margin-top: 101px; }
+
+#section1 .subSection .graph .caption { display: block; font-size: 18px; line-height: 24px; text-align: center; }
+#section1 .subSection .graph .round { float: left; width: 508px; }
+#section1 .subSection .graph .round .img { width: 280px; height: 280px; margin: -16px auto 0; padding-top: 92px; background: url('../img/img-graph-1.png') no-repeat 0 0; background-size: 280px 280px; text-align: center; font-size: 18px; }
+#section1 .subSection .graph .round .img span { display: block; margin-bottom: 12px; font-size: 60px; line-height: 1; }
+#section1 .subSection .graph .round .caption { margin-top: 13px; font-family: 'notokr-bold'; }
+#section1 .subSection .graph .stick { float: right; width: 644px; }
+#section1 .subSection .graph .stick img { display: block; width: 458px; height: 265px; margin: 32px auto 0 52px; }
+#section1 .subSection .graph .stick .caption { width: 275px; margin: 40px auto 0; }
+#section1 .subSection .desc_list { margin-top: 32px; padding-left: 96px; }
+#section1 .subSection .desc_list li { position: relative; margin-bottom: 8px; padding-left: 32px; }
+#section1 .subSection .desc_list li:before { content: ''; position: absolute; top: 50%; left: 0; width: 16px; height: 16px; margin-top: -8px; background: #c6d9ec; 
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	-ms-border-radius: 8px;
+	border-radius: 8px;
+}
+#section1 .subSection .desc_list li.current:before { background: #5194fd; }
+
+#section1 .market_table { overflow: hidden; margin-top: 64px; text-align: center; }
+#section1 .market_table dl { float: left; width: 50%; border-right: 1px solid rgba(0, 0, 0, .24); }
+#section1 .market_table dl:last-child { border-right: none; }
+#section1 .market_table dl > * { border-top: 1px solid rgba(0, 0, 0, .24); }
+#section1 .market_table dt { padding: 20px 0; font-size: 18px; line-height: 24px; font-family: 'notokr-bold'; }
+#section1 .market_table dd { padding: 30px 0 14px; border-bottom: 1px solid rgba(0, 0, 0, .24); font-size: 18px; }
+#section1 .market_table dd p { margin-bottom: 16px; }
+#section1 .market_table dd p.em { margin: -8px 0 0 8px; font-size: 48px; line-height: 64px; letter-spacing: -.5px; color: #126bd6; }
 
 #section1 .rodeMap { position: relative; padding-left: 182px; }
 #section1 .rodeMap li { position: relative; margin-bottom: 32px; padding-left: 80px; }
+#section1 .rodeMap li:last-child { margin-bottom: 0; }
 #section1 .rodeMap dl { display: table; width: 100%; }
 #section1 .rodeMap dt { display: table-cell; width: 142px; font-size: 20px; line-height: 24px; vertical-align: middle; }
 #section1 .rodeMap dd { display: table-cell; padding-left: 24px; border-left: 1px solid #677897; vertical-align: middle; }
@@ -197,18 +231,6 @@ img { vertical-align: top; }
 .subSection .img { width: 614px; }
 .subSection .img.fRight { text-align: right; }
 .subSection strong { display: block; margin: 32px 0 16px; font-family: 'notokr-medium'; }
-.subSection .graph {  }
-.subSection .graph .caption { display: block; font-size: 18px; line-height: 24px; text-align: center; }
-.subSection .graph .round { float: left; width: 508px; }
-.subSection .graph .round .img { width: 280px; height: 280px; margin: 0 auto; background: url('../img/img-graph-1.png') no-repeat 0 0; background-size: 280px 280px; }
-.subSection .graph .round .caption { margin-top: 13px; font-family: 'notokr-bold'; }
-.subSection .graph .stick { float: right; width: 644px; }
-.subSection .graph .stick img { display: block; width: 458px; height: 265px; margin: 0 auto; }
-.subSection .graph .stick .caption { width: 275px; margin: 40px auto 0; }
-.subSection .desc_list { margin-top: 32px; }
-.subSection .desc_list li {  }
-.subSection .desc_list li.current {  }
-.subSection .desc_list li.connected {  }
 
 .number_list { margin-top: 32px; line-height: 32px; font-family: 'notokr-light'; color: #fff; letter-spacing: -.2px; }
 .number_list li { padding-left: 30px; text-indent: -30px; }
