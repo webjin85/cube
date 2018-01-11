@@ -47,27 +47,30 @@ $(window).on('scroll', function(e) {
 	<div id="menu">
 		<div class="content">
 			<h1 class="title"><a href="#cube">Cube</a></h1>
+			
+			<a href="#cube" class="m_btn">전체메뉴</a>
+			<div class="m_event">
+				<div class="lang">
+					<a href="" class="select">US</a>
+					<ul>
+						<li><a href="">KR</a></li>
+						<li><a href="">JP</a></li>
+						<li><a href="">CH</a></li>
+						<li><a href="">FR</a></li>
+					</ul>
+				</div>
 
-			<div class="lang">
-				<a href="" class="select">US</a>
-				<ul>
-					<li><a href="">KR</a></li>
-					<li><a href="">JP</a></li>
-					<li><a href="">CH</a></li>
-					<li><a href="">FR</a></li>
+				<ul class="nav">
+					<li><a href="">What We Do</a></li>
+					<li><a href="">ICO Plan</a></li>
+					<li><a href="">Whitepapers</a></li>
+					<li><a href="">Team</a></li>
+					<li><a href="">FAQ</a></li>
+					<li><a href="">Contact</a></li>
+					<li><a href="">Blog</a></li>
+					<li><a href="">Bounty</a></li>
 				</ul>
 			</div>
-
-			<ul class="nav">
-				<li><a href="">What We Do</a></li>
-				<li><a href="">ICO Plan</a></li>
-				<li><a href="">Whitepapers</a></li>
-				<li><a href="">Team</a></li>
-				<li><a href="">FAQ</a></li>
-				<li><a href="">Contact</a></li>
-				<li><a href="">Blog</a></li>
-				<li><a href="">Bounty</a></li>
-			</ul>
 		</div>
 	</div>
 	<!-- //header-->
@@ -77,8 +80,10 @@ $(window).on('scroll', function(e) {
 		<!-- section0_Main -->
 		<div id="section_main">
 			<div class="content">
-				<h2 class="sec_title" role="text">CUBE, The Company<br>That Redefines<br>Autonomous Car</h2>
-				<img src="img/img-car.png" alt="">
+				<div class="title_area">
+					<h2 class="sec_title" role="text">CUBE, The Company<br>That Redefines<br>Autonomous Car</h2>
+					<img src="img/img-car.png" alt="">
+				</div>
 
 				<div class="main_info">
 					<h3 class="info_title">Token Sale</h3>
@@ -95,7 +100,7 @@ $(window).on('scroll', function(e) {
 						</li>
 					</ul>
 
-					<p class="txt" role="text">'70% Bonus'<br>Token Plan Be a VIP Member</p>
+					<p class="txt" role="text">'70% Bonus' <span class="whNowrap">Token Plan Be a VIP Member</span></p>
 
 					<a href="" class="btn">
 						<div class="flipper">
@@ -135,18 +140,16 @@ $(window).on('scroll', function(e) {
 				</a>
 				
 				<h3 class="sub_sec_title">Features</h3>
-				<div class="subSection">
+				<div class="subSection sec1_1">
+					<img src="img/img-sub-1.png" class="img1" alt="">
 					<div class="fLeft txt">
 						<h4 class="sub_title">The simplest way to have a professioanal webpage.</h4>
 						<p>The key to Blockchain is that technology ensures trust. CUBE uses block-chain technology to ensure the security of autonomous mobile networks. </p>
 						<p>In the operation of autonomous vehicles, many IOTs provide information to autonomous vehicles. The attacker seeks to gain access to the network between an autonomous car and IoT or traffic center. In such instances, the hash of the infected binary differs from the hash included in the multisig transaction which is signed by the SW provider and the OEM. Thus, the vehicles can readily detect such an attack before installing the infected SW update. Distribution of a false update by claiming to be the OEM or SW update provider could be ceased since the overlay nodes are aware of the Public Key of the OEM and the SW update provider. Therefore, the attacker cannot claim to be either of these entities as it requires the private key associated with the Public Key of the relevant entities.</p>
 					</div>
-					<div class="fRight img">
-						<img src="img/img-sub-1.png" class="img1" alt="">
-					</div>
 				</div>
 
-				<div class="subSection">
+				<div class="subSection sec1_2">
 					<div class="fLeft img">
 						<img src="img/img-sub-2.png" class="img2" alt="">	
 					</div>
@@ -158,14 +161,12 @@ $(window).on('scroll', function(e) {
 					</div>
 				</div>
 
-				<div class="subSection">
+				<div class="subSection sec1_3">
+					<img src="img/img-sub-3.png" class="img3" alt="">
 					<div class="fLeft txt">
 						<h4 class="sub_title">Quantum Hashing Cryptography Layer</h4>
 						<p>Blockchain has improved security by using hashes appropriately. However, there is a growing concern that as the performance of computers grows rapidly, hash cryptography can become a limitation. Cube develops quantum cryptography to prevent malicious attacks against autonomous vehicles. This Quantum Cryptography will contribute not only to the autonomous drive, but also to the overall upgrade of the entire Blockchain technology. This Quantum Hashing Cryptography Layer will be applied from 2022.</p>
 						<p>Cube's quantum hash technology will provide an important opportunity to ensure a high level of security throughout the blockchain field using simple hash technology. Cube increases the level of security by using continuously changing quantum characteristics, The characteristics that the data receive depend on the angle of polarization; further, the characteristics of the data are destroyed at the moment of a malicious attack.</p>
-					</div>
-					<div class="fRight img">
-						<img src="img/img-sub-3.png" class="img3" alt="">
 					</div>
 				</div>
 
@@ -1135,74 +1136,78 @@ $(window).on('scroll', function(e) {
 				<h2 class="sec_title">FAQ</h2>
 				<ul class="faq_list">
 					<li>
-						<button type="button" class="title">What is CUBE?</button>
+						<a href="#cube" role="button" class="title">What is CUBE?</a>
 						<div class="cont" style="display: block;">
 							<p>CUBE is a British corporation that produces security platform for autonomous vehicles based on blockchain technology. Autonomous cars continuously communicate with various sites to remotely monitor their internal and outside states. These various network accesses increase the risk of malicious attacks on autonomous vehicles. Cube solves the problem of these autonomous vehicles’ security by using blockchain technologies, AI-based deep learning and quantum hash cryptography.</p>
 						</div>
 					</li>
 					<li>
-						<button type="button" class="title">What is an ICO?</button>
+						<a href="#cube" role="button" class="title">What is an ICO?</a>
 						<div class="cont">
 					</li>
 					<li>
-						<button type="button" class="title">How can I buy CUBE?</button>
+						<a href="#cube" role="button" class="title">How can I buy CUBE?</a>
 						<div class="cont">
 					</li>
 					<li>
-						<button type="button" class="title">Where and how CUBE token can be used?</button>
+						<a href="#cube" role="button" class="title">Where and how CUBE token can be used?</a>
 						<div class="cont">
 					</li>
 					<li>
-						<button type="button" class="title">What will the bonus token structure be like for the CUBE token sale?</button>
+						<a href="#cube" role="button" class="title">What will the bonus token structure be like for the CUBE token sale?</a>
 						<div class="cont">
 					</li>
 					<li>
-						<button type="button" class="title">What is the value of 1 CUBE token?</button>
+						<a href="#cube" role="button" class="title">What is the value of 1 CUBE token?</a>
 						<div class="cont">
 					</li>
 					<li>
-						<button type="button" class="title">How can I get my questions answered by the CUBE team?</button>
+						<a href="#cube" role="button" class="title">How can I get my questions answered by the CUBE team?</a>
 						<div class="cont">
 					</li>
 					<li>
-						<button type="button" class="title">How would autonomous vehicle security system work with blockchain?</button>
+						<a href="#cube" role="button" class="title">How would autonomous vehicle security system work with blockchain?</a>
 						<div class="cont">
 					</li>
 					<li>
-						<button type="button" class="title">How / where can I check my CUBE Token balance?</button>
+						<a href="#cube" role="button" class="title">How / where can I check my CUBE Token balance?</a>
 						<div class="cont">
 					</li>
 					<li>
-						<button type="button" class="title">When will Cube tokens be available on the exchanges?</button>
+						<a href="#cube" role="button" class="title">When will Cube tokens be available on the exchanges?</a>
 						<div class="cont">
 					</li>
 					<li>
-						<button type="button" class="title">Can I send ETH from exchanges wallet?</button>
+						<a href="#cube" role="button" class="title">Can I send ETH from exchanges wallet?</a>
 						<div class="cont">
 					</li>
 					<li>
-						<button type="button" class="title">I sent ETH by accident. Can I get a refund?</button>
+						<a href="#cube" role="button" class="title">I sent ETH by accident. Can I get a refund?</a>
 						<div class="cont">
 					</li>
 					<li>
-						<button type="button" class="title">I want to know the exact amount and distribution of the cube tokens.</button>
+						<a href="#cube" role="button" class="title">I want to know the exact amount and distribution of the cube tokens.</a>
 						<div class="cont">
 					</li>
 					<li>
-						<button type="button" class="title">Do you have KYC verification process?</button>
+						<a href="#cube" role="button" class="title">Do you have KYC verification process?</a>
 						<div class="cont">
 					</li>
 				</ul>
 
 				<h3 class="sub_sec_title">As Seen On</h3>
-				<ul class="asSeenOn_list">
-					<li><img src="img/logo-nbc-2.png" alt=""></li>
-					<li><img src="img/logo-fox.png" alt=""></li>
-					<li><img src="img/logo-cbs-8.png" alt=""></li>
-					<li><img src="img/logo-news-9.png" alt=""></li>
-					<li><img src="img/logo-bazaar.png" alt=""></li>
-					<li><img src="img/logo-schedule.png" alt=""></li>
-				</ul>
+				<div class="asSeenOn_list">
+					<ul>
+						<li><img src="img/logo-nbc-2.png" alt=""></li>
+						<li><img src="img/logo-fox.png" alt=""></li>
+						<li><img src="img/logo-cbs-8.png" alt=""></li>
+						<li><img src="img/logo-news-9.png" alt=""></li>
+					</ul>
+					<ul>
+						<li><img src="img/logo-bazaar.png" alt=""></li>
+						<li><img src="img/logo-schedule.png" alt=""></li>
+					</ul>
+				</div>
 			</div>
 		</div>
 		<!-- //section5_FAQ -->
