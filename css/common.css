@@ -1,7 +1,7 @@
 @charset "utf-8";
 
 /* initialize */
-html { font-size: 1rem; line-height: 1.5em; }
+html { font-size: 16px; line-height: 1.5em; }
 body { margin:0; padding:0; background:#f8fafd; color:#677897; letter-spacing: -.2px; -webkit-text-size-adjust:none; -ms-text-size-adjust: none; font-family: 'notokr-regular'}
 html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, address,big, cite, code, del, dfn, em,
 img, ins, kbd, q, s, samp, small, strike,strong, sub, sup, tt, var, b, u, i, dl, dt, dd, ol, ul, li, fieldset,form, label, legend, table,
@@ -128,7 +128,7 @@ img { vertical-align: top; }
 #section1 .subSection { position: relative; }
 #section1 .subSection .graph .caption { display: block; font-size: 1.125rem; line-height: 1.333em; text-align: center; }
 #section1 .subSection .graph .round { float: left; width: 44.1%; }
-#section1 .subSection .graph .round .img { width: 280px; height: 280px; margin: -16px auto 0; padding-top: 92px; background: url('../img/img-graph-1.png') no-repeat 0 0; background-size: 280px 280px; text-align: center; font-size: 1.125rem; }
+#section1 .subSection .graph .round .img { width: 280px; height: 280px; margin: -16px auto 0; padding-top: 92px; background: url('../img/img-graph-1.png') no-repeat 0 0; background-size: 100% auto; text-align: center; font-size: 1.125rem; }
 #section1 .subSection .graph .round .img span { display: block; margin-bottom: 12px; font-size: 60px; line-height: 1; }
 #section1 .subSection .graph .round .caption { margin-top: 13px; font-family: 'notokr-bold'; }
 #section1 .subSection .graph .stick { float: right; width: 55.9%; }
@@ -606,7 +606,7 @@ img { vertical-align: top; }
 	#section1 .market_table dl:first-child { margin-bottom: 40px; }
 	#section1 .market_table dl > * { border: none; }
 	#section1 .market_table dt { padding: 0; font-size: 1.5rem; font-family: 'notokr-medium'; }
-	#section1 .market_table dd { padding-top: 16px; }
+	#section1 .market_table dd { padding-top: 16px; min-height: auto; }
 	#section1 .market_table dd p.em { display: inline-block; margin: 8px 0 0; font-size: 2rem; line-height: 1.313em; }
 	#section1 .market_table dd p { margin: 0; }
 	#section1 .market_table dd p:first-child { margin-bottom: 16px; }
@@ -624,14 +624,65 @@ img { vertical-align: top; }
 }
 
 @media screen and (max-width: 480px) {
+	html { font-size: 14px; line-height: 1.429em; letter-spacing: 0; }
+	#menu { height: 49px; }
+	#menu .title { width: 60px; height: 17px; }
+	#menu .content { height: 49px; padding: 16px; }
+
+	#section_main .content { padding: 0 16px; }	
+	#section_main img { margin: -17% 0 0 -10%; }
+	#section_main .main_info { width: auto; margin: 0 -16px; padding: 16px; -webkit-border-radius: 0; border-radius: 0; font-size: 0.857rem; line-height: 1.333em; }
+	#section_main .main_info .info_title { margin-bottom: 4px; }
+	#section_main .main_info .info_title, #section_main .main_info li em { font-size: 1.429rem; line-height: 1.4em; }
+	#section_main .main_info ul { margin-bottom: 16px; padding-top: 32px; }
+	#section_main .main_info ul > li { overflow: hidden; float: none; display: block; margin-bottom: 16px; }
+	#section_main .main_info ul > li:last-child { margin-bottom: 0; }
+	#section_main .main_info li em { float: right; margin: 0; }
+	#section_main .main_info li p { line-height: 2.333em; }
+	#section_main .copy { margin-top: 0; }
+	#section_main .copy .content { padding: 16px; font-size: 1rem; line-height: 1.429em; color: #c5dfff; }
+	#section_main .copy span { font-size: 0.857rem; line-height: 1.333em; }
+
 	#section1 .content { padding: 24px 16px; }
-	#section1 .video_wrap { width: 100%; margin: 16px auto; padding-top: 55.7%; }
+	#section1 .video_wrap { width: 100%; margin: 16px auto 24px; padding-top: 55.7%; }
+	#section1 .subSection .video_wrap { margin-top: 48px; }
+	#section1 .btn { width: 100%; margin-top: 24px; }
+	#section1 .btn .flipper .button { width: 100%; }
+	#section1 .img1 { width: 100%; margin-top: 16px; }
+	#section1 .img2 { width: 160px; }
+	#section1 .subSection .graph .round .img { width: 62.5%; height: 180px; }
+	#section1 .subSection .desc_list li { margin-bottom: 3px; padding-left: 16px; font-size: 0.857rem; line-height: 1.333em; }
+	#section1 .subSection .desc_list li:before { width: 8px; height: 8px; margin-top: -4px; -webkit-border-radius: 4px; border-radius: 4px; }
+	#section1 .subSection .graph .round .caption { margin-top: 16px; font-family: 'notokr-regular'; }
+	#section1 .subSection .desc_list { margin-top: 16px; }
+	#section1 .subSection .graph .stick img { width: 100%; height: auto; margin: 40px 0 16px; }
+	#section1 .subSection .graph .stick .caption { width: 100%; margin: 0; font-size: 1rem; line-height: 1.333em; }
+	#section1 .market_table { margin-top: 40px; }
+	#section1 .market_table dt { font-size: 1.143rem; line-height: 1.5em; }
+	#section1 .market_table dd { padding: 8px 0 0; }
+	#section1 .market_table dd p { font-size: 1rem; line-height: 1.333em; }
+	#section1 .market_table dd p:first-child { margin-bottom: 8px; }
+	#section1 .market_table dd p.em { margin-top: 0; font-size: 1.429em; line-height: 1.400em; }
+	#section1 .market_table dd p:last-child { margin-left: 4px; }
+	#section1 .rodeMap .number { width: 32px; height: 32px; margin-top: -16px; line-height: 32px; font-size: 1.143rem; }
+	#section1 .rodeMap .stick { top: 10px; left: 14px; width: 4px; }
+	#section1 .rodeMap li { padding-left: 48px; }
+	#section1 .rodeMap dt { width: 33px; font-size: 1rem; line-height: 1.333em; }
+	#section1 .rodeMap dd { padding-left: 30px; border-left: none; }
 
 	#section2 .content { padding: 24px 16px; }
 	#section3 .content { padding: 24px 16px; }
 	#section4 .content { padding: 24px 16px 0; }
 	#section5 .content { padding: 24px 16px; }
 	#section6 .footer .content { padding: 143px 16px 96px; }
+
+	.sec_title, .sub_sec_title { margin-bottom: 24px; font-size: 1.714rem; letter-spacing: .4px; }
+	.sub_title { margin-bottom: 16px; font-size: 1.429rem; line-height: 1.400em; }
+
+	.subSection { padding-top: 0; }
+	.subSection strong { margin: 24px 0 8px; }
+
+	.btn { -webkit-perspective: none; perspective: none; -webkit-border-radius: 4px; border-radius: 4px; }
 }
 
 @media screen and (max-width: 414px) {
