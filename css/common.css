@@ -65,7 +65,11 @@ img { vertical-align: top; }
 	border-radius: 18px;
 }
 #menu .lang ul { display: none; }
-#menu .m_btn { display: none; }
+#menu .lang ul li { padding: 6px 0 6px 16px; }
+#menu .lang ul li a { display: block; width: 22px; height: 24px; opacity: .6; }
+#menu .lang ul li a:hover { text-decoration: underline; opacity: 1; }
+#menu .lang ul li.on { display: none; }
+#menu .m_btn, #menu .m { display: none; }
 
 #menu.on { background: #fff; 
 	-webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 0 8px 0 rgba(0, 0, 0, .06);
@@ -128,8 +132,10 @@ img { vertical-align: top; }
 #section1 .subSection { position: relative; }
 #section1 .subSection .graph .caption { display: block; font-size: 1.125rem; line-height: 1.333em; text-align: center; }
 #section1 .subSection .graph .round { float: left; width: 44.1%; }
-#section1 .subSection .graph .round .img { width: 280px; height: 280px; margin: -16px auto 0; padding-top: 92px; background: url('../img/img-graph-1.png') no-repeat 0 0; background-size: 100% auto; text-align: center; font-size: 1.125rem; }
-#section1 .subSection .graph .round .img span { display: block; margin-bottom: 12px; font-size: 60px; line-height: 1; }
+#section1 .subSection .graph .round .img { position: relative; width: 280px; margin: -16px auto 0; text-align: center; font-size: 1.125rem; }
+#section1 .subSection .graph .round .img img { width: 100%; height: auto; }
+#section1 .subSection .graph .round .img span { position: absolute; display: block; top: 0; left: 0; width: 100%; height: 100%; padding-top: 92px; }
+#section1 .subSection .graph .round .img span em { display: block; margin-bottom: 12px; font-size: 60px; line-height: 1; }
 #section1 .subSection .graph .round .caption { margin-top: 13px; font-family: 'notokr-bold'; }
 #section1 .subSection .graph .stick { float: right; width: 55.9%; }
 #section1 .subSection .graph .stick img { display: block; width: 458px; height: 265px; margin: 32px auto 0 52px; }
@@ -403,7 +409,7 @@ img { vertical-align: top; }
 .plan_table th { color: #fff; }
 .plan_table td { color: #66acff; }
 .plan_table tr { border-bottom: 1px solid rgba(255, 255, 255, .3); }
-.plan_table th, .plan_table td { height: 64px; border-right: 1px solid rgba(255, 255, 255, .3); }
+.plan_table th, .plan_table td { padding: 19px 0; border-right: 1px solid rgba(255, 255, 255, .3); }
 .plan_table th:last-child, .plan_table td:last-child { border-right: 0; }
 .plan_table tfoot td { border: none; }
 
@@ -512,11 +518,15 @@ img { vertical-align: top; }
 }
 
 @media screen and (max-width: 955px) {
-	#menu .m_event { display: none; }	
 	#menu { height: 73px; }
 	#menu .content { height: 73px; padding: 24px 16px; }
 	#menu .title { width: 90px; height: 25px; }
 	#menu .m_btn { overflow: hidden; display: block; position: absolute; top: 0; right: 0; width: 73px; height: 73px; font-size: 1px; text-indent: -1000px; }
+	#menu .m_btn span { position: absolute; top: 50%; left: 50%; display: block; width: 36px; height: 3px; margin: -1px 0 0 -18px; background: currentColor; color: #fff; transition: color 300ms; }
+	#menu .m_btn span:after, #menu .m_btn span:before { content: ''; display: block; position: absolute; height: 3px; background: currentColor; }
+	#menu .m_btn span:after { top: -9px; width: 29px; }
+	#menu .m_btn span:before { bottom: -9px; width: 22px; }
+	#menu.on .m_btn span { color: rgba(0, 0, 0, .87); }
 	
 	#section_main { padding-top: 73px; }
 	#section_main .content { padding-top: 10px; }
@@ -593,6 +603,7 @@ img { vertical-align: top; }
 
 	.plan_table table { font-size: 1rem; }
 	.plan_table.type2 th { font-size: 0.875rem; }
+	.plan_table th, .plan_table td { padding: 14px 0; }
 
 	.subSection { padding-top: 40px; }
 	.subSection .txt, .subSection .img { float: none; width: 100%; }
@@ -624,11 +635,32 @@ img { vertical-align: top; }
 }
 
 @media screen and (max-width: 480px) {
+	#menu .m { display: block; }
+	#menu .m_menu { position: fixed; top: -100%; left: 0; width: 100%; height: 100%; background: rgba(255, 255, 255, .96); }	
+	#menu .m_menu .nav { float: none; margin: 25px auto 0; text-align: center; }
+	#menu .m_menu .nav li { float: none; width: 100%; margin-bottom: 16px; }
+	#menu .m_menu .nav a { display: inline-block; color: rgba(0, 0, 0, .87); font-size: 1.286rem; line-height: 1.333em; }
+	#menu .m_menu .nav li.on a { border-bottom: 1px solid rgba(0, 0, 0, .87); }
+	#menu .m_menu .select { display: none; }
+	#menu .m_menu .lang { float: none; display: block; width: 100%; height: 50px; padding: 9px 12px; }
+	#menu .m_menu .lang ul { display: block; }
+	#menu .m_menu .lang ul li { float: left; padding: 0; }
+	#menu .m_menu .lang ul li.on { display: block; }
+	#menu .m_menu .lang ul li a { width: 30px; height: 32px; color: rgba(0, 0, 0, .87); line-height: 32px; text-align: center; }
+	#menu .m_menu .lang ul li.on a { position: relative; opacity: .87; }
+	#menu .m_menu .lang ul li.on a:after { content: ''; position: absolute; bottom: 5px; left: 4px; width: 22px; height: 1px; background: rgba(0, 0, 0, .87); }
+	#menu .m_menu .signIn { display: block; width: 120px; height: 40px; margin: 30px auto 0; -webkit-border-radius: 4px; border-radius: 4px; border: 1px solid #126bd6; color: #126bd6; font-size: 1.143rem; line-height: 38px; text-align: center; }  
+
 	html { font-size: 14px; line-height: 1.429em; letter-spacing: 0; }
 	#menu { height: 49px; }
 	#menu .title { width: 60px; height: 17px; }
 	#menu .content { height: 49px; padding: 16px; }
+	#menu .m_btn { width: 49px; height: 49px; }
+	#menu .m_btn span { width: 20px; height: 2px; margin: -1px 0 0 -10px; }
+	#menu .m_btn span:after { height: 2px; top: -6px; width: 16px; }
+	#menu .m_btn span:before { height: 2px; bottom: -6px; width: 12px; }
 
+	#section_main { background-image: none; }
 	#section_main .content { padding: 0 16px; }	
 	#section_main img { margin: -17% 0 0 -10%; }
 	#section_main .main_info { width: auto; margin: 0 -16px; padding: 16px; -webkit-border-radius: 0; border-radius: 0; font-size: 0.857rem; line-height: 1.333em; }
@@ -650,7 +682,9 @@ img { vertical-align: top; }
 	#section1 .btn .flipper .button { width: 100%; }
 	#section1 .img1 { width: 100%; margin-top: 16px; }
 	#section1 .img2 { width: 160px; }
-	#section1 .subSection .graph .round .img { width: 62.5%; height: 180px; }
+	#section1 .subSection .graph .round .img { width: 180px; }
+	#section1 .subSection .graph .round .img span { padding-top: 60px; }
+	#section1 .subSection .graph .round .img span em { margin-bottom: 4px; font-size: 36px; }
 	#section1 .subSection .desc_list li { margin-bottom: 3px; padding-left: 16px; font-size: 0.857rem; line-height: 1.333em; }
 	#section1 .subSection .desc_list li:before { width: 8px; height: 8px; margin-top: -4px; -webkit-border-radius: 4px; border-radius: 4px; }
 	#section1 .subSection .graph .round .caption { margin-top: 16px; font-family: 'notokr-regular'; }
@@ -671,20 +705,95 @@ img { vertical-align: top; }
 	#section1 .rodeMap dd { padding-left: 30px; border-left: none; }
 
 	#section2 .content { padding: 24px 16px; }
-	#section3 .content { padding: 24px 16px; }
-	#section4 .content { padding: 24px 16px 0; }
-	#section5 .content { padding: 24px 16px; }
-	#section6 .footer .content { padding: 143px 16px 96px; }
+	#section2 .sec_title + .sub_sec_title { margin: 40px 0 24px; }
+	#section2 .txt2 { margin-top: 16px; font-size: 1rem; line-height: 1.333em; }
+	#section2 .graph { margin-top: 48px; }
+	#section2 .graph ul { width: 40px; height: 250px; margin-top: 24px; font-size: 0.857rem; line-height: 1.333em; }
+	#section2 .graph li .cell strong { font-size: 0.857rem; line-height: 1.500em; }
+	#section2 .graph li { width: 150px; padding-left: 52px; }
+	#section2 .graph li:first-child .cell strong { font-size: 1.714rem; line-height: 1.333em; }
+	#section2 .graph h4 { font-size: 1.429rem; line-height: 1.400em; }
+	#section2 .graph .fund li { width: 179px; margin-left: -139px; padding-right: 52px }
+	#section2 .graph li.small .cell { font-size: 0.714rem; }
+	#section2 .graph li.small strong { font-size: 0.571rem; }
+	#section2 .sub_sec_title { margin-bottom: 24px; }
+	#section2 .profit_list { margin-top: 24px; }
+	#section2 .profit_list li { padding: 24px 16px; }
+	#section2 .profit_list li:last-child { margin-bottom: 0; }
+	#section2 .profit_list li h5 { padding-bottom: 28px; margin-bottom: 24px; font-size: 1.429rem; line-height: 1.4em; }
+	#section2 .profit_list li p { font-size: 1rem; line-height: 1.429em; }
+	#section2 .img4 { width: 270px; margin: 0 auto 24px; }
+	#section2 .exchanges_list { margin-top: 24px; padding: 0 16px; }
+	#section2 .exchanges_list li { width: 47%; margin-right: 6%; }
+	#section2 .exchanges_list li:nth-child(2n+2) { margin-right: 0; }
 
+	#section3 .content { padding: 24px 16px; }
+	#section3 .Whitepaper_list { margin-top: 40px; }
+	#section3 .Whitepaper_list li { float: none; width: 256px; margin: 0 auto 40px; }
+	#section3 .Whitepaper_list li:last-child { margin: 0 auto; }
+	#section3 .Whitepaper_list .btn_wrap a { padding: 0 10px; font-size: 1.143em; line-height: 24px; }
+	#section3 .Whitepaper_list .img p { font-size: 1.143rem; line-height: 1.500em; }
+
+	#section4 .content { padding: 24px 16px 0; }
+	#section4 .sub_sec_title { margin-bottom: 24px; }
+	#section4 .sec_title + .sub_sec_title { margin-top: 40px; }
+	#section4 .sub_title.lite { margin-bottom: 8px; }
+	#section4 .team_list .profile { padding: 20px 0 20px 80px; }
+	#section4 .team_list .profile .photo { width: 64px; height: 64px; -webkit-border-radius: 32px; border-radius: 32px; }
+	#section4 .team_list .name { font-size: 1.143rem; line-height: 1.500em; }
+	#section4 .team_list .sns { width: 24px; height: 24px; margin-left: 5px; }
+	#section4 .team_list .team_list { font-size: 0.857rem; line-height: 1.333em; }
+	#section4 .team_list li:last-child { margin-bottom: 0; }
+	#section4 .sub_sec_title + .sub_title.lite { margin-top: 24px; }
+	#section4 .img_list { margin-top: 24px; }
+	#section4 .img_list .pc { display: none; }
+	#section4 .img_list li { float: none; position: relative; width: 100%; margin: 0 0 16px; }
+	#section4 .img_list li:after { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: -webkit-linear-gradient(180deg, rgba(0, 0, 0, .2), rgba(0, 0, 0, .0)); background: linear-gradient(180deg, rgba(0, 0, 0, .2), rgba(0, 0, 0, .0)); }
+	#section4 .img_list li:last-child { margin-bottom: 0; }
+	#section4 .img_list li img { display: block; }
+	#section4 .img_list li p { position: absolute; top: 16px; left: 16px; z-index: 10; margin: 0; font-size: 1.143rem; line-height: 1.500em; color: #fff; }
+	#section5 .faq_list .title:before { right: 15px; }
+	#section5 .faq_list .title:after { right: 8px; }
+
+	#section5 .content { padding: 24px 16px; }
+	#section5 .faq_list { margin-top: 40px; }
+	#section5 .faq_list .title { padding: 20px 32px 20px 0; font-size: 1.143rem; line-height: 1.500em; }
+	#section5 .faq_list .cont { padding: 24px 0; font-size: 0.857rem; line-height: 1.333em; color: rgba(0, 0, 0, .6); }
+	#section5 .asSeenOn_list { margin-top: 24px; padding: 0 6px; }
+	#section5 .asSeenOn_list ul { width: 100%; }
+	
+	#section6 .sec_title { margin-bottom: 32px; font-size: 2.000rem; }
+	#section6 .footer .content { padding: 32px 16px 16px; text-align: center; }
+	#section6 .shadow_box { padding: 24px 24px 32px; }
+	#section6 .sns_list { width: 100%; }
+	#section6 .sns_list li { width: 20%; height: auto; margin: 0; }
+	#section6 .sns_list li a { display: block; padding: 8px; }
+	#section6 .footer .bottom { margin-top: 24px; }
+	#section6 .footer .bottom .link, #section6 .footer .bottom .copy { float: none; }
+
+	.content { padding: 0 16px; }
 	.sec_title, .sub_sec_title { margin-bottom: 24px; font-size: 1.714rem; letter-spacing: .4px; }
 	.sub_title { margin-bottom: 16px; font-size: 1.429rem; line-height: 1.400em; }
+	.sub_title.lite { margin: 40px 0 16px; }
+	.sub_sec_title + .sub_title.lite { margin-top: 24px; }
+	.sub_title.lite + .subSection { padding-top: 8px; }
 
 	.subSection { padding-top: 0; }
 	.subSection strong { margin: 24px 0 8px; }
+	
+	.plan_table table { margin-top: 24px; font-size: 0.714rem; }
+	.plan_table th, .plan_table td { padding: 10px 0; }
+	.plan_table.type2 table { margin-top: 24px; }
+	.plan_table.type2 th, .plan_table.type2 td { font-size: 0.714rem; }
 
+	.number_list { margin-top: 24px; line-height: 1.429em; }
+	.txtInfo { font-size: 0.857rem; line-height: 1.333em; }
+	.dot_list { margin-top: 8px; line-height: 1.429em; }
 	.btn { -webkit-perspective: none; perspective: none; -webkit-border-radius: 4px; border-radius: 4px; }
 }
 
-@media screen and (max-width: 414px) {
-	
+@media screen and (max-height: 568px) {
+	#menu .m_menu .nav { margin-top: 0; }
+	#menu .m_menu .nav li { margin-bottom: 8px; }
+	#menu .m_menu .signIn { margin-top: 12px; }
 }
