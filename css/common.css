@@ -813,7 +813,6 @@ img { vertical-align: top; }
 	#section4 .team_list .name { font-size: 1.143rem; line-height: 1.500em; }
 	#section4 .team_list .sns { width: 24px; height: 24px; margin-left: 5px; }
 	#section4 .team_list .team_list { font-size: 0.857rem; line-height: 1.333em; }
-	#section4 .team_list li:last-child { margin-bottom: 0; }
 	#section4 .sub_sec_title + .sub_title.lite { margin-top: 24px; }
 	#section4 .img_list { margin-top: 24px; }
 	#section4 .img_list .pc { display: none; }
@@ -835,8 +834,8 @@ img { vertical-align: top; }
 	#section6 .sec_title { margin-bottom: 32px; font-size: 2.000rem; }
 	#section6 .footer .content { padding: 32px 16px 16px; text-align: center; }
 	#section6 .shadow_box { padding: 24px 24px 32px; }
-	#section6 .sns_list { width: 100%; }
-	#section6 .sns_list li { width: 20%; height: auto; margin: 0; }
+	#section6 .sns_list { width: 240px; }
+	#section6 .sns_list li { width: 48px; height: auto; margin: 0; }
 	#section6 .sns_list li a { display: block; padding: 8px; }
 	#section6 .footer .bottom { margin-top: 24px; }
 	#section6 .footer .bottom .link, #section6 .footer .bottom .copy { float: none; }
