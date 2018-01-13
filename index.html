@@ -8,72 +8,47 @@
 <meta name="format-detection" content="telephone=no">
 <meta name="keywords" content="">
 <meta name="description" content="">
-<title>Document</title>
+<title>CUBE</title>
 <link rel="stylesheet" type="text/css" href="css/font.css">
 <link rel="stylesheet" type="text/css" href="css/common.css">
 <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
 <script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
 <script type="text/javascript" src="js/common.js"></script>
-<script>
-var g = {};
-
-/* PC와 모바일 분기 */
-g.filter = 'win16|win32|win64|mac|macintel';
-if(navigator.platform) {
-	console.log(navigator.platform.toLowerCase());
-	if(g.filter.indexOf(navigator.platform.toLowerCase()) < 0) {
-		//mobile
-		//alert('mobile 접속');
-	} else {
-		//PC
-		//alert('pc 접속');
-	}
-};
-
-$(window).on('scroll', function(e) {
-	var s = $(window).scrollTop();
-
-	if(s > 70) {
-		$('#menu').addClass('on');
-	} else {
-		$('#menu').removeClass('on');
-	}
-})
-</script>
+<script type="text/javascript" src="js/jquery.viewFx.min.js"></script>
 </head>
 <body>
 <div id="wrap">
 	<!-- header-->
 	<div id="menu">
 		<div class="content">
-			<h1 class="title"><a href="#cube">Cube</a></h1>
+			<h1 class="title"><a href="#section_main">Cube</a></h1>
 			
 			<a href="#cube" class="m_btn"><span>전체메뉴</span></a>
 			<div class="m_menu">
 				<div class="lang">
-					<a href="" class="select">US</a>
+					<a href="#cube" class="select">US</a>
 					<ul>
-						<li class="on"><a href="">US</a></li>
-						<li><a href="">KR</a></li>
-						<li><a href="">JP</a></li>
-						<li><a href="">CH</a></li>
-						<li><a href="">FR</a></li>
+						<li class="on"><a href="#cube">US</a></li>
+						<li><a href="#cube">KR</a></li>
+						<li><a href="#cube">JP</a></li>
+						<li><a href="#cube">CH</a></li>
+						<li><a href="#cube">FR</a></li>
 					</ul>
 				</div>
 
 				<ul class="nav">
-					<li class="on m"><a href="">HOME</a></li>
-					<li><a href="">What We Do</a></li>
-					<li><a href="">ICO Plan</a></li>
-					<li><a href="">Whitepapers</a></li>
-					<li><a href="">Team</a></li>
-					<li><a href="">FAQ</a></li>
-					<li><a href="">Contact</a></li>
-					<li><a href="">Blog</a></li>
-					<li><a href="">Bounty</a></li>
+					<li class="on m"><a href="#section_main">HOME</a></li>
+					<li><a href="#section1">What We Do</a></li>
+					<li><a href="#section2">ICO Plan</a></li>
+					<li><a href="#section3">Whitepapers</a></li>
+					<li><a href="#section4">Team</a></li>
+					<li><a href="#section5">FAQ</a></li>
+					<li><a href="#section6">Contact</a></li>
+					<li><a href="https://cubeintelligenceltd.blogspot.in/">Blog</a></li>
+					<li><a href="https://bitcointalk.org/index.php?topic=2629634.msg26758377">Bounty</a></li>
 				</ul>
 
-				<a href="" class="m signIn">Sign in</a>
+				<a href="/signin" class="m signIn">Sign in</a>
 			</div>
 		</div>
 	</div>
@@ -129,14 +104,14 @@ $(window).on('scroll', function(e) {
 				<h2 class="sec_title">What We Do</h2>
 				<div class="video_wrap">
 					<img src="img/img-video-1.png" alt="">
-					<a href="" class="play">플레이</a>
+					<a href="https://www.youtube.com/embed/Fd9BJCkrsa4" class="play">플레이</a>
 				</div>
 
 				<h4 class="sub_title">CUBE Autonomous car Security Platform based on Blockchain</h4>
 				<p>Autonomous cars rely heavily on wireless communication techniques, such as vehicle-to-vehicle, navigation route information, GPS, and other driving data. Autonomous cars continuously communicate with various sites to remotely monitor their internal and outside states. These various network accesses increase the risk of malicious attacks on autonomous vehicles. Cube solves the problem of these autonomous vehicles’ security by using blockchain technologies, AI-based deep learning and quantum hash cryptography.</p>
 				<p>In the future, the $770 billion autonomous automotive market will see Cube as the first user of blockchain-based security. We will provide an autonomous vehicle security platform to companies such as automotive manufacturers, and related firms, such as Google and Uber.</p>
 
-				<a href="" class="btn">
+				<a href="./CUBEWhite_Paper-V1.pdf" download="CUBEWhite_Paper-V1.pdf" class="btn">
 					<div class="flipper">
 						<span class="button front">Whitepaper Download</span>
 						<span class="button back">Whitepaper Download</span>
@@ -145,7 +120,7 @@ $(window).on('scroll', function(e) {
 				
 				<h3 class="sub_sec_title">Features</h3>
 				<div class="subSection sec1_1">
-					<img src="img/img-sub-1.png" class="img1 action" alt="">
+					<img src="img/img-sub-1.png" class="img1 moving" alt="">
 					<div class="fLeft txt">
 						<h4 class="sub_title">The simplest way to have a professioanal webpage.</h4>
 						<p>The key to Blockchain is that technology ensures trust. CUBE uses block-chain technology to ensure the security of autonomous mobile networks. </p>
@@ -155,7 +130,7 @@ $(window).on('scroll', function(e) {
 
 				<div class="subSection sec1_2">
 					<div class="fLeft img">
-						<img src="img/img-sub-2.png" class="img2 action" alt="">	
+						<img src="img/img-sub-2.png" class="img2 moving" alt="">	
 					</div>
 					<div class="fRight txt">
 						<h4 class="sub_title">AI Deep - Learning Layer</h4>
@@ -166,7 +141,7 @@ $(window).on('scroll', function(e) {
 				</div>
 
 				<div class="subSection sec1_3">
-					<img src="img/img-sub-3.png" class="img3 action" alt="">
+					<img src="img/img-sub-3.png" class="img3 moving" alt="">
 					<div class="fLeft txt">
 						<h4 class="sub_title">Quantum Hashing Cryptography Layer</h4>
 						<p>Blockchain has improved security by using hashes appropriately. However, there is a growing concern that as the performance of computers grows rapidly, hash cryptography can become a limitation. Cube develops quantum cryptography to prevent malicious attacks against autonomous vehicles. This Quantum Cryptography will contribute not only to the autonomous drive, but also to the overall upgrade of the entire Blockchain technology. This Quantum Hashing Cryptography Layer will be applied from 2022.</p>
@@ -177,7 +152,7 @@ $(window).on('scroll', function(e) {
 				<div class="subSection">
 					<div class="video_wrap">
 						<img src="img/img-video-2.png" alt="">
-						<a href="" class="play">플레이</a>
+						<a href="https://www.youtube.com/embed/ZSZqY9stDfg" class="play">플레이</a>
 					</div>
 					<h4 class="sub_title">CUBE Technology Market Application Plan</h4>
 
@@ -191,7 +166,7 @@ $(window).on('scroll', function(e) {
 				<h3 class="sub_sec_title">Market</h3>
 				<div class="subSection">
 					<div class="graph">
-						<div class="round action">
+						<div class="round moving">
 							<div class="img">
 								<img src="img/img-graph-1.png" alt="">
 								<span>
@@ -206,7 +181,7 @@ $(window).on('scroll', function(e) {
 								<li>Autonomous or Connected Car Market</li>
 							</ul>
 						</div>
-						<div class="stick">
+						<div class="stick moving">
 							<img src="img/img-graph-2.png" alt="">
 							<span class="caption">Markets of Autonomous Vehicles and Connected Vehicles </span>
 						</div>
@@ -659,14 +634,14 @@ $(window).on('scroll', function(e) {
 						
 					<h3 class="sub_sec_title">Potential Exchanges</h3>
 					<ul class="exchanges_list">
-						<li><img src="img/logo-orderbook.png" alt="Orderbook"></li>
-						<li><img src="img/logo-hitbtc.png" alt="HitBTC"></li>
-						<li><img src="img/logo-yobit.png" alt="YoBit.net"></li>
-						<li><img src="img/logo-etherdelta.png" alt="EtherDelta"></li>
-						<li><img src="img/logo-mercatox.png" alt="mercatox"></li>
-						<li><img src="img/logo-coinrail.png" alt="coinrail"></li>
-						<li><img src="img/logo-livecoin.png" alt="livecoin"></li>
-						<li><img src="img/logo-idex.png" alt="idex"></li>
+						<li><a href="https://www.orderbook.io/#/" target="_blank"><img src="img/logo-orderbook.png" alt="Orderbook"></a></li>
+						<li><a href="" target="_blank"><img src="img/logo-hitbtc.png" alt="HitBTC"></a></li>
+						<li><a href="https://hitbtc.com/" target="_blank"><img src="img/logo-yobit.png" alt="YoBit.net"></a></li>
+						<li><a href="https://yobit.net/en/" target="_blank"><img src="img/logo-etherdelta.png" alt="EtherDelta"></a></li>
+						<li><a href="https://etherdelta.com/" target="_blank"><img src="img/logo-mercatox.png" alt="mercatox"></a></li>
+						<li><a href="https://mercatox.com/" target="_blank"><img src="img/logo-coinrail.png" alt="coinrail"></a></li>
+						<li><a href="https://www.livecoin.net/" target="_blank"><img src="img/logo-livecoin.png" alt="livecoin"></a></li>
+						<li><a href="https://idex.market/eth/eos" target="_blank"><img src="img/logo-idex.png" alt="idex"></li>
 					</ul>
 
 					<h3 class="sub_sec_title">Transparency Policy</h3>
@@ -701,7 +676,7 @@ $(window).on('scroll', function(e) {
 							<p>White paper</p>
 						</div>
 						<div class="btn_wrap">
-							<a href="">EN</a>
+							<a href="./CUBEWhite_Paper-V1.pdf" download="CUBEWhite_Paper-V1.pdf">EN</a>
 						</div>
 					</li>
 					<li>
@@ -710,9 +685,9 @@ $(window).on('scroll', function(e) {
 							<p>Token sale policy</p>
 						</div>
 						<div class="btn_wrap">
-							<a href="">EN</a>
-							<a href="">KR</a>
-							<a href="">CN</a>
+							<a href="./Cube_tokens_sale_policy_EN-final-ver4-2.pdf" download="Cube_tokens_sale_policy_EN-final-ver4-2.pdf">EN</a>
+							<a href="./Cube-tokens-sale-policy-KR-ver2-2.pdf" download="Cube-tokens-sale-policy-KR-ver2-2.pdf">KR</a>
+							<a href="./Cube-tokens-sale-policy-CN-ver2-2.pdf" download="Cube-tokens-sale-policy-CN-ver2-2.pdf">CN</a>
 						</div>
 					</li>
 					<li>
@@ -721,9 +696,9 @@ $(window).on('scroll', function(e) {
 							<p>Transparency policy</p>
 						</div>
 						<div class="btn_wrap">
-							<a href="">EN</a>
-							<a href="">KR</a>
-							<a href="">CN</a>
+							<a href="./Transparency-Policy-EN-Ver2.pdf" download="Transparency-Policy-EN-Ver2.pdf">EN</a>
+							<a href="./Transparency-Policy-KR-Ver2.pdf" download="Transparency-Policy-KR-Ver2.pdf">KR</a>
+							<a href="./Transparency Policy-CN-Ver2.pdf" download="Transparency Policy-CN-Ver2.pdf">CN</a>
 						</div>
 					</li>
 					<li>
@@ -732,10 +707,10 @@ $(window).on('scroll', function(e) {
 							<p>One pager</p>
 						</div>
 						<div class="btn_wrap">
-							<a href="">EN</a>
-							<a href="">KR</a>
-							<a href="">CN</a>
-							<a href="">JP</a>
+							<a href="./One-Page-Final-EN-ver1.pdf" download="One-Page-Final-EN-ver1.pdf">EN</a>
+							<a href="./One-Pager-Final-KR-ver1.pdf" download="One-Pager-Final-KR-ver1.pdf">KR</a>
+							<a href="./One-Page-Final-CN-ver1.pdf" download="One-Page-Final-CN-ver1.pdf">CN</a>
+							<a href="./One-Page-Final-JP-ver1.pdf" download="One-Page-Final-JP-ver1.pdf">JP</a>
 						</div>
 					</li>
 				</ul>
@@ -752,7 +727,7 @@ $(window).on('scroll', function(e) {
 					<div class="profile">
 						<img src="img/Philip Lee, MS.png" alt="" class="photo">
 						<span class="name">Philip Lee, MS.</span>
-						<a href="" class="sns"><img src="img/ico-linkedin.png" alt=""></a>
+						<a href="" target="_blank" class="sns"><img src="img/ico-linkedin.png" alt=""></a>
 					</div>
 					<ul class="flag">
 						<li><img src="img/logo-stanford.png" alt="stanford"></li>
@@ -768,7 +743,7 @@ $(window).on('scroll', function(e) {
 						<div class="profile">
 							<img src="img/Bong H. Lee, Ph.D.png" alt="" class="photo">
 							<span class="name">Bong H. Lee, Ph.D.</span>
-							<a href="" class="sns"><img src="img/ico-linkedin.png" alt=""></a>
+							<a href="https://www.linkedin.com/in/bong-h-lee-ph-d-01031a10b" target="_blank" class="sns"><img src="img/ico-linkedin.png" alt=""></a>
 						</div>
 						<ul class="flag">
 							<li><img src="img/logo-stanford.png" alt="stanford"></li>
@@ -782,21 +757,21 @@ $(window).on('scroll', function(e) {
 						<div class="profile">
 							<img src="img/Dr. Jae Sung Lee.png" alt="" class="photo">
 							<span class="name">Dr. Jae Sung Lee</span>
-							<a href="" class="sns"><img src="img/ico-linkedin.png" alt=""></a>
+							<a href="https://www.linkedin.com/in/jae-sung-lee-8a6884153/" target="_blank" class="sns"><img src="img/ico-linkedin.png" alt=""></a>
 						</div>
 						<ul class="flag">
 							<li><img src="img/logo-mit.png" alt="mit"></li>
 							<li><img src="img/logo-hyu.png" alt="hyu"></li>
 						</ul>
 						<div class="txt">
-							<p>Jae-sung Lee is a medicine doctor and has been involved with the Cube team since the Green Car project. He came to the Cube after working in the hospital. He majored in mechanical engineering at Hanyang University. He received his master's degree in medicine from Kyung Hee University Medical School and worked at Kyung Hee University Hospital. Dr. Lee is currently planning and operating the overall strategy of CUBE.</p>
+							<p>Jae Sung Lee led the founding of CUBE in 2017 and is currently leading the overall management as CEO of CUBE. Jae Sung Lee is a medical doctor and has been involved with the Cube team since the Green Car project. He came to the Cube after working in the hospital. He majored in mechanical engineering at Hanyang University. After that, he graudated medical school of Kyung Hee University, and worked at Kyung Hee University Hospital.</p>
 						</div>
 					</li>
 					<li>
 						<div class="profile">
 							<img src="img/Geon H. Lee, Ph.D.png" alt="" class="photo">
 							<span class="name">Geon H. Lee, Ph.D.</span>
-							<a href="" class="sns"><img src="img/ico-linkedin.png" alt=""></a>
+							<a href="https://www.linkedin.com/in/geon-h-lee-801b06153" target="_blank" class="sns"><img src="img/ico-linkedin.png" alt=""></a>
 						</div>
 						<ul class="flag">
 							<li><img src="img/logo-kaist.png" alt="kaist"></li>
@@ -812,7 +787,7 @@ $(window).on('scroll', function(e) {
 						<div class="profile">
 							<img src="img/Ryan Park.png" alt="" class="photo">
 							<span class="name">Ryan Park</span>
-							<a href="" class="sns"><img src="img/ico-linkedin.png" alt=""></a>
+							<a href="https://www.linkedin.com/in/ryanparkbeaver/" target="_blank" class="sns"><img src="img/ico-linkedin.png" alt=""></a>
 						</div>
 						<ul class="flag">
 							<li><img src="img/logo-carnegie.png" alt="carnegie"></li>
@@ -825,7 +800,6 @@ $(window).on('scroll', function(e) {
 						<div class="profile">
 							<img src="img/Sung Min Park.png" alt="" class="photo">
 							<span class="name">Sung Min Park</span>
-							<a href="" class="sns"><img src="img/ico-linkedin.png" alt=""></a>
 						</div>
 						<ul class="flag">
 							<li><img src="img/logo-carnegie.png" alt="carnegie"></li>
@@ -838,7 +812,6 @@ $(window).on('scroll', function(e) {
 						<div class="profile">
 							<img src="img/Dr.-Ing. Thomas Hofmann.png" alt="" class="photo">
 							<span class="name">Dr.-Ing. Thomas Hofmann.</span>
-							<a href="" class="sns"><img src="img/ico-linkedin.png" alt=""></a>
 						</div>
 						<ul class="flag">
 							<li><img src="img/logo-daimler.png" alt="daimler"></li>
@@ -855,7 +828,7 @@ $(window).on('scroll', function(e) {
 						<div class="profile">
 							<img src="img/Dr. Andreas Roggon.png" alt="" class="photo">
 							<span class="name">Dr. Andreas Roggon</span>
-							<a href="" class="sns"><img src="img/ico-linkedin.png" alt=""></a>
+							<a href="https://www.linkedin.com/in/andreas-roggon-9014918/" target="_blank" class="sns"><img src="img/ico-linkedin.png" alt=""></a>
 						</div>
 						<ul class="flag">
 							<li><img src="img/logo-daimler.png" alt="daimler"></li>
@@ -870,7 +843,7 @@ $(window).on('scroll', function(e) {
 						<div class="profile">
 							<img src="img/Jan-Philipp Jost.png" alt="" class="photo">
 							<span class="name">Jan-Philipp Jost.</span>
-							<a href="" class="sns"><img src="img/ico-linkedin.png" alt=""></a>
+							<a href="https://www.linkedin.com/in/jan-philipp-jost-85a66769" target="_blank" class="sns"><img src="img/ico-linkedin.png" alt=""></a>
 						</div>
 						<ul class="flag">
 							<li><img src="img/logo-porche.png" alt="porche"></li>
@@ -885,7 +858,6 @@ $(window).on('scroll', function(e) {
 						<div class="profile">
 							<img src="img/Siegfried Ottmayer.png" alt="" class="photo">
 							<span class="name">Siegfried Ottmayer</span>
-							<a href="" class="sns"><img src="img/ico-linkedin.png" alt=""></a>
 						</div>
 						<ul class="flag">
 							<li><img src="img/logo-daimler.png" alt="daimler"></li>
@@ -901,7 +873,7 @@ $(window).on('scroll', function(e) {
 						<div class="profile">
 							<img src="img/Balakrishnan.png" alt="" class="photo">
 							<span class="name">Balakrishnan</span>
-							<a href="" class="sns"><img src="img/ico-linkedin.png" alt=""></a>
+							<a href="https://www.linkedin.com/in/balakrishnan-c-7662b4154" target="_blank" class="sns"><img src="img/ico-linkedin.png" alt=""></a>
 						</div>
 						<ul class="flag">
 							<li><img src="img/logo-periyar.png" alt="periyar"></li>
@@ -915,7 +887,7 @@ $(window).on('scroll', function(e) {
 						<div class="profile">
 							<img src="img/Ryu Hae Yeon,Ph.D.png" alt="" class="photo">
 							<span class="name">Ryu Hae Yeon,Ph.D</span>
-							<a href="" class="sns"><img src="img/ico-linkedin.png" alt=""></a>
+							<a href="https://www.linkedin.com/in/h-youn-ryu-b50246155/" target="_blank" class="sns"><img src="img/ico-linkedin.png" alt=""></a>
 						</div>
 						<ul class="flag">
 							<li><img src="img/logo-mit.png" alt="mit"></li>
@@ -928,7 +900,7 @@ $(window).on('scroll', function(e) {
 						<div class="profile">
 							<img src="img/Hyesun Lee.png" alt="" class="photo">
 							<span class="name">Hyesun Lee</span>
-							<a href="" class="sns"><img src="img/ico-linkedin.png" alt=""></a>
+							<a href="https://www.linkedin.com/in/hye-sun-sunny-lee-407877a1" target="_blank" class="sns"><img src="img/ico-linkedin.png" alt=""></a>
 						</div>
 						<ul class="flag">
 							<li><img src="img/logo-ucla.png" alt="ucla"></li>
@@ -943,7 +915,6 @@ $(window).on('scroll', function(e) {
 						<div class="profile">
 							<img src="img/Yoon Jae Song.png" alt="" class="photo">
 							<span class="name">Yoon Jae Song</span>
-							<a href="" class="sns"><img src="img/ico-linkedin.png" alt=""></a>
 						</div>
 						<ul class="flag">
 							<li><img src="img/logo-skku.png" alt="skku"></li>
@@ -956,7 +927,6 @@ $(window).on('scroll', function(e) {
 						<div class="profile">
 							<img src="img/Hae Won Kwon.png" alt="" class="photo">
 							<span class="name">Hae Won Kwon</span>
-							<a href="" class="sns"><img src="img/ico-linkedin.png" alt=""></a>
 						</div>
 						<ul class="flag">
 							<li><img src="img/logo-innov.png" alt="innov"></li>
@@ -969,7 +939,6 @@ $(window).on('scroll', function(e) {
 						<div class="profile">
 							<img src="img/Il Man Kong.png" alt="" class="photo">
 							<span class="name">Il Man Kong</span>
-							<a href="" class="sns"><img src="img/ico-linkedin.png" alt=""></a>
 						</div>
 						<ul class="flag">
 							<li><img src="img/logo-chosun.png" alt="chosun"></li>
@@ -986,7 +955,6 @@ $(window).on('scroll', function(e) {
 						<div class="profile">
 							<img src="img/Gi-Yeon Hwang, Ph.D.png" alt="" class="photo">
 							<span class="name">Gi-Yeon Hwang, Ph.D.</span>
-							<a href="" class="sns"><img src="img/ico-linkedin.png" alt=""></a>
 						</div>
 						<ul class="flag"></ul>
 						<div class="txt">
@@ -997,7 +965,7 @@ $(window).on('scroll', function(e) {
 						<div class="profile">
 							<img src="img/Ian Scarffe.png" alt="" class="photo">
 							<span class="name">Ian Scarffe</span>
-							<a href="" class="sns"><img src="img/ico-linkedin.png" alt=""></a>
+							<a href="https://www.linkedin.com/in/ianscarffe/ " target="_blank" class="sns"><img src="img/ico-linkedin.png" alt=""></a>
 						</div>
 						<ul class="flag"></ul>
 						<div class="txt">
@@ -1009,7 +977,6 @@ $(window).on('scroll', function(e) {
 						<div class="profile">
 							<img src="img/Dr. Byiung Kun Park.png" alt="" class="photo">
 							<span class="name">Dr. Byiung Kun Park</span>
-							<a href="" class="sns"><img src="img/ico-linkedin.png" alt=""></a>
 						</div>
 						<ul class="flag">
 							<li><img src="img/logo-s.png" alt="서울대학교"></li>
@@ -1025,7 +992,7 @@ $(window).on('scroll', function(e) {
 						<div class="profile">
 							<img src="img/Jae Kim.png" alt="" class="photo">
 							<span class="name">Jae Kim</span>
-							<a href="" class="sns"><img src="img/ico-linkedin.png" alt=""></a>
+							<a href="https://www.linkedin.com/in/jae-kim-3b8755146/" target="_blank" class="sns"><img src="img/ico-linkedin.png" alt=""></a>
 						</div>
 						<ul class="flag">
 							<li><img src="img/logo-incubator.png" alt="incubator"></li>
@@ -1038,7 +1005,7 @@ $(window).on('scroll', function(e) {
 						<div class="profile">
 							<img src="img/Jay Kim.png" alt="" class="photo">
 							<span class="name">Jay Kim</span>
-							<a href="" class="sns"><img src="img/ico-linkedin.png" alt=""></a>
+							<a href="https://www.linkedin.com/in/diffmach" target="_blank" class="sns"><img src="img/ico-linkedin.png" alt=""></a>
 						</div>
 						<ul class="flag">
 							<li><img src="img/logo-icoschedule.png" alt="icoschedule"></li>
@@ -1053,7 +1020,7 @@ $(window).on('scroll', function(e) {
 						<div class="profile">
 							<img src="img/Shin Sop Kim.png" alt="" class="photo">
 							<span class="name">Shin Sop Kim</span>
-							<a href="" class="sns"><img src="img/ico-linkedin.png" alt=""></a>
+							<a href="https://www.linkedin.com/in/shin-sop-kim-33b70976/" target="_blank" class="sns"><img src="img/ico-linkedin.png" alt=""></a>
 						</div>
 						<ul class="flag">
 							<li><img src="img/logo-stanford.png" alt="stanford"></li>
@@ -1068,7 +1035,7 @@ $(window).on('scroll', function(e) {
 						<div class="profile">
 							<img src="img/Richard Biggs.png" alt="" class="photo">
 							<span class="name">Richard Biggs</span>
-							<a href="" class="sns"><img src="img/ico-linkedin.png" alt=""></a>
+							<a href="https://linkedin.com/in/rabiggs" target="_blank" class="sns"><img src="img/ico-linkedin.png" alt=""></a>
 						</div>
 						<ul class="flag">
 							<li><img src="img/logo-abnamro.png" alt="abnamro"></li>
@@ -1144,75 +1111,104 @@ $(window).on('scroll', function(e) {
 				<ul class="faq_list">
 					<li>
 						<a href="#cube" role="button" class="title">What is CUBE?</a>
-						<div class="cont" style="display: block;">
+						<div class="cont">
 							<p>CUBE is a British corporation that produces security platform for autonomous vehicles based on blockchain technology. Autonomous cars continuously communicate with various sites to remotely monitor their internal and outside states. These various network accesses increase the risk of malicious attacks on autonomous vehicles. Cube solves the problem of these autonomous vehicles’ security by using blockchain technologies, AI-based deep learning and quantum hash cryptography.</p>
 						</div>
 					</li>
 					<li>
 						<a href="#cube" role="button" class="title">What is an ICO?</a>
 						<div class="cont">
+							<p>An Initial Coin Offering, also commonly referred to as an ICO, is a fundraising mechanism in which new projects sell their underlying crypto tokens in exchange for bitcoin and ether. It's somewhat similar to an Initial Public Offering (IPO) in which investors purchase shares of a company.</p>
+						</div>
 					</li>
 					<li>
 						<a href="#cube" role="button" class="title">How can I buy CUBE?</a>
 						<div class="cont">
+							<p>Investing is easy and straightforward. Simply press on "Contribute" at the top of the website and follow the steps given in our comprehensive investment guide.</p>
+						</div>
 					</li>
 					<li>
 						<a href="#cube" role="button" class="title">Where and how CUBE token can be used?</a>
 						<div class="cont">
+							<p>CUBE token owner can use CUBE token for the payment of gas station, purchasing new car or used car, garage payment, tire exchange, or carsharing payment. CUBE token can be cashed in token exchange market also.</p>
+						</div>
 					</li>
 					<li>
 						<a href="#cube" role="button" class="title">What will the bonus token structure be like for the CUBE token sale?</a>
 						<div class="cont">
+							<p>Bonuses varies according to when you purchased the tokens. During the reservation-sale period, you will get 70% of the total amount you purchase. During the pre-sale, the bonus will be 50%. During public sale, the bonuses will be 10%, none for Round 1, Round 2 each. The maximum bonus that Cube can give is 12,096,000.</p>
+						</div>
 					</li>
 					<li>
 						<a href="#cube" role="button" class="title">What is the value of 1 CUBE token?</a>
 						<div class="cont">
+							<p>1 ETH equals to 1,000 CUBE. Therefore, 1 CUBE is 0.001 ETH.</p>
+						</div>
 					</li>
 					<li>
 						<a href="#cube" role="button" class="title">How can I get my questions answered by the CUBE team?</a>
 						<div class="cont">
+							<p>Please contact info@cubeint.io for additional information or questions. Then CUBE team will be with you as soon as possible.</p>
+						</div>
 					</li>
 					<li>
 						<a href="#cube" role="button" class="title">How would autonomous vehicle security system work with blockchain?</a>
 						<div class="cont">
+							<p>In the operation of autonomous vehicles, many IOTs provide information to autonomous vehicles. The attacker seeks to gain access to the network between an autonomous car and IoT or traffic center. In such instances, the hash of the infected binary differs from the hash included in the multisig transaction which is signed by the SW provider and the OEM. Thus, the vehicles can readily detect such an attack before installing the infected SW update. Distribution of a false update by claiming to be the OEM or SW update provider could be ceased since the overlay nodes are aware of the Public Key of the OEM and the SW update provider. Therefore, the attacker cannot claim to be either of these entities as it requires the private key associated with the Public Key of the relevant entities.</p>
+						</div>
 					</li>
 					<li>
 						<a href="#cube" role="button" class="title">How / where can I check my CUBE Token balance?</a>
 						<div class="cont">
+							To check your CUBE Token balance, you need to <a href="/signin">login</a> into your account and go to <a href="/dashboard">Dashboard</a>.
+						</div>
 					</li>
 					<li>
 						<a href="#cube" role="button" class="title">When will Cube tokens be available on the exchanges?</a>
 						<div class="cont">
+							<p>We do have plans to register CUBE to several exchanges in order to promote active distributions. Once the exchange listing is confirmed, we will announce the news through CUBE social network channels. Then you will be eligible to exchange CUB through public exchanges.</p>
+						</div>
 					</li>
 					<li>
 						<a href="#cube" role="button" class="title">Can I send ETH from exchanges wallet?</a>
 						<div class="cont">
+							<p>Yes, you can send ETH from exchanges wallet, since we also manually check the flow of ETH real time.</p>
+						</div>
 					</li>
 					<li>
 						<a href="#cube" role="button" class="title">I sent ETH by accident. Can I get a refund?</a>
 						<div class="cont">
+							<p>Unfortunately, we do not accept any form of refund request. Purchased tokens are not eligible for a refund under the terms and policy.</p>
+						</div>
 					</li>
 					<li>
 						<a href="#cube" role="button" class="title">I want to know the exact amount and distribution of the cube tokens.</a>
 						<div class="cont">
+							<p>CUBE will sell total of 43,200,000 cubes other than bonuses. If all cubes in each round are sold, the total number of cubes to be published will be 72,000,000. Of these cubes, 43,200,000 cubes, which is 60%, are basic cube sales. And 12,096,000 cubes, which is about 17%, will become bonus cubes. If all the cubes are sold, sum of the sales cubes and bonus cubes which is 77% of total cubes, i.e. 55,296,000 cubes will be distributed among investors.<br>
+							The sales cubes, bonus cubes, and bounty cubes are first deducted from the sales cubes, which is 60% of the total cubes. If it exceeds sales cubes then rest will be deducted from the team reserve and company reserve at a rate of 5: 5.<br>
+							If all cubes are not sold out, then remaining cubes will be burnt. Therefore, investors can avoid damages even if all cubes are not sold. In some ICOs, unsold tokens become the property of the company, which in turn can lead to losses for investors. We will always think about investors' interest to become the best.</p>
+						</div>
 					</li>
 					<li>
 						<a href="#cube" role="button" class="title">Do you have KYC verification process?</a>
 						<div class="cont">
+							<p>At present, CUBE team is concerned about the value of anonymity and safety. Currently, Cube membership and investments are anonymous. This is because that the Cube considers anonymity and convenience as a priority value. But if these systems make Cube members feel uneasy, it's not what Cube wants. Therefore, Cube will prepare personal authentication and 2FA authentication methods before the end of ICO if many members want. This verification does not apply to all existing investors. Members who want to be anonymous will be invested in the same way as before, and for those who want to be verified for higher safety, they will be able to log in after such authentication. If you do not go through authentication, some features may be limited. <br>
+							This may vary depending on the regulatory situation of each government, and Cube will comply with government regulations. To this end, the above information may change depending on the circumstances of the new regulation.</p>
+						</div>
 					</li>
 				</ul>
 
 				<h3 class="sub_sec_title">As Seen On</h3>
 				<div class="asSeenOn_list">
 					<ul>
-						<li><img src="img/logo-nbc-2.png" alt=""></li>
-						<li><img src="img/logo-fox.png" alt=""></li>
-						<li><img src="img/logo-cbs-8.png" alt=""></li>
-						<li><img src="img/logo-news-9.png" alt=""></li>
+						<li><a href="http://www.nbc-2.com/story/36943223/cube-intelligence-to-launch-its-presales-on-cube-token-from-december-1st" target="_blank"><img src="img/logo-nbc-2.png" alt=""></a></li>
+						<li><a href="http://www.fox5vegas.com/story/36943223/cube-intelligence-to-launch-its-presales-on-cube-token-from-december-1st" target="_blank"><img src="img/logo-fox.png" alt=""></a></li>
+						<li><a href="http://www.cbs8.com/story/36943223/cube-intelligence-to-launch-its-presales-on-cube-token-from-december-1st" target="_blank"><img src="img/logo-cbs-8.png" alt=""></a></li>
+						<li><a href="http://www.news9.com/story/36943223/cube-intelligence-to-launch-its-presales-on-cube-token-from-december-1st" target="_blank"><img src="img/logo-news-9.png" alt=""></a></li>
 					</ul>
 					<ul>
-						<li><img src="img/logo-bazaar.png" alt=""></li>
-						<li><img src="img/logo-schedule.png" alt=""></li>
+						<li><a href="https://icobazaar.com/v2/cube" target="_blank"><img src="img/logo-bazaar.png" alt=""></a></li>
+						<li><a href="https://www.coinschedule.com/icos/e1708/cube-ico.html" target="_blank"><img src="img/logo-schedule.png" alt=""></a></li>
 					</ul>
 				</div>
 			</div>
@@ -1226,34 +1222,34 @@ $(window).on('scroll', function(e) {
 					<h2 class="sec_title">Talk together</h2>
 					<ul class="sns_list">
 						<li>
-							<a href=""><img src="img/ico-bitcoin.png" alt="bitcoin"></a>
+							<a href="https://bitcointalk.org/index.php?action=profile;u=1337551"><img src="img/ico-bitcoin.png" target="_blank" alt="bitcoin"></a>
 						</li>
 						<li>
-							<a href=""><img src="img/ico-blog.png" alt="blog"></a>
+							<a href="https://cubeintelligenceltd.blogspot.com"><img src="img/ico-blog.png" target="_blank" alt="blog"></a>
 						</li>
 						<li>
-							<a href=""><img src="img/ico-facebook.png" alt="facebook"></a>
+							<a href="https://www.facebook.com/cubeintelligenceltd"><img src="img/ico-facebook.png" target="_blank" alt="facebook"></a>
 						</li>
 						<li>
-							<a href=""><img src="img/ico-instagram.png" alt="instagram"></a>
+							<a href="https://www.instagram.com/cubeintelligence/"><img src="img/ico-instagram.png" target="_blank" alt="instagram"></a>
 						</li>
 						<li>
-							<a href=""><img src="img/ico-linkedin.png" alt="linkedin"></a>
+							<a href="https://www.linkedin.com/company/cubeint-io/"><img src="img/ico-linkedin.png" target="_blank" alt="linkedin"></a>
 						</li>
 						<li>
 							<a href=""><img src="img/ico-reddit.png" alt="reddit"></a>
 						</li>
 						<li>
-							<a href=""><img src="img/ico-slack.png" alt="slack"></a>
+							<a href="https://cubeint.slack.com" target="_blank"><img src="img/ico-slack.png" alt="slack"></a>
 						</li>
 						<li>
-							<a href=""><img src="img/ico-telegram.png" alt="telegram"></a>
+							<a href="https://t.me/joinchat/HEId7g9EFqAGkWqAtD67Hg" target="_blank"><img src="img/ico-telegram.png" alt="telegram"></a>
 						</li>
 						<li>
-							<a href=""><img src="img/ico-twitter.png" alt="twitter"></a>
+							<a href="https://twitter.com/cubeintel" target="_blank"><img src="img/ico-twitter.png" alt="twitter"></a>
 						</li>
 						<li>
-							<a href=""><img src="img/ico-youtube.png" alt="youtube"></a>
+							<a href="https://www.youtube.com/channel/UCv8xnuzEmiPJtXAjogSbhxw" target="_blank"><img src="img/ico-youtube.png" alt="youtube"></a>
 						</li>
 					</ul>
 				</div>
@@ -1270,8 +1266,8 @@ $(window).on('scroll', function(e) {
 
 					<div class="bottom">
 						<div class="link">
-							<a href="" class="terms">Terms and Conditions</a>
-							<a href="" class="policy">Privacy Policy</a>
+							<a href="/term" class="terms">Terms and Conditions</a>
+							<a href="/privacypolicy" class="policy">Privacy Policy</a>
 						</div>
 						<p class="copy">© 2017 CUBE INTELLIGENCE LTD. All rights reserved.</p>
 					</div>
@@ -1282,29 +1278,39 @@ $(window).on('scroll', function(e) {
 			
 		<div id="overlay">
 			<div class="content">
-				<a href="" class="btn">
+				<a href="/signup" class="btn">
 					<div class="flipper">
 						<span class="button front">Contribute</span>
 						<span class="button back">Contribute Now</span>
 					</div>
 				</a>
-				<a href="" class="top">메인으로 이동</a>
+				<a href="#section_main" class="top">메인으로 이동</a>
 			</div>
 		</div>
 
 		<!-- side_nav -->
 		<div id="side_nav">
 			<ul>
-				<li>main</li>
-				<li>What We Do</li>
-				<li class="on">ICO Plan</li>
-				<li>Whitepapers</li>
-				<li>Team</li>
-				<li>FAQ</li>
-				<li>Contact</li>
+				<li class="on" aria-label="main"></li>
+				<li aria-label="What We Do"></li>
+				<li aria-label="ICO Plan"></li>
+				<li aria-label="Whitepapers"></li>
+				<li aria-label="Team"></li>
+				<li aria-label="FAQ"></li>
+				<li aria-label="Contact"></li>
 			</ul>
 		</div>
 		<!-- //side_nav -->
+
+		<!-- video -->
+		<div class="video" id="video">
+			<div class="dimmed"></div>
+			<div class="movie-holder">
+				<span class="btnClose"><em class="img"></em></span>
+				<div class="contents"></div>
+			</div>
+		</div>
+		<!-- //video -->
 
 	</div>
 	<!-- //content -->
