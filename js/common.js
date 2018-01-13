@@ -129,28 +129,49 @@ function menuEvent() {
 function movingEvent() {
 	try{
 		for(var i = 0; i < $('.moving').length; i++) {
-			if(g.scrollTop > g.movingArr[i].t){
-				
-				// $('.moving').eq(i).addClass('animate');
-				break;
+			if(g.scrollTop + (g.winH / 1.1) > g.movingArr[i].t){
+				$('.moving').eq(i).addClass('animate');
 			} else {
-				// break;
-				//$('.moving').eq(i).removeClass('animate');
+				$('.moving').eq(i).removeClass('animate');
 			}
 		}
 	} catch(err){}
-	$('.moving').eq(i).addClass('animate');
+}
+
+function rodeMapEvent() {
+	try{
+		for(var i = 0; i < $('.rodeMap li').length; i++) {
+			if(g.scrollTop + (g.winH / 1.5) > g.rodeMapArr[i].t){
+				$('#section1 .rodeMap li').eq(i).addClass('on');
+			} else {
+				$('#section1 .rodeMap li').eq(i).removeClass('on');
+			}
+
+			if(g.scrollTop + (g.winH / 1.5) > g.rodeMapArr[0].t) {
+				$('#section1 .rodeMap').addClass('on');
+			} else {
+				$('#section1 .rodeMap').removeClass('on');
+			}
+		}
+	} catch(err){}
 }
 
 //각 섹션 위치 및 높이값
 function init() {
+	//전체 섹션 위치값
 	for(var i=0; i<g.length; i++) {
 		g.topArr[i] = ( {t: $('#content > div:eq('+i+')').offset().top-g.headH});
 	}
 
+	//에니메이트 이미지 위치값
 	for(var i=0; i<$('.moving').length; i++) {
 		g.movingArr[i] = ( {t: $('.moving').eq(i).offset().top});
 	}
+
+	//로드맵 위치값
+	for(var i=0; i<$('.rodeMap li').length; i++) {
+		g.rodeMapArr[i] = ( {t: $('.rodeMap li').eq(i).offset().top});
+	}	
 }
 
 //글로벌 변수 세팅
@@ -161,6 +182,7 @@ function setting() {
 	g.scrollTop = $(window).scrollTop();
 	g.topArr = [];
 	g.movingArr = [];
+	g.rodeMapArr = [];
 	g.isWheelMove = false;
 	g.length = 6;
 	g.filter;
@@ -186,12 +208,16 @@ $(window).load(function() {
 	buttonEvent();
 	createLanguage();
 	init();
+
+	movingEvent();
+	rodeMapEvent();
 })
 
 $(window).scroll(function(){
 	change();
 	menuEvent();
 	movingEvent();
+	rodeMapEvent();
 });
 
 $(window).resize(function() {
