@@ -6,7 +6,7 @@ function buttonEvent(){
 	$('#menu .m_btn').click(function(){
 		if(!$(this).hasClass('close')) {
 			$(this).addClass('close');
-			$('.m_menu').css('display', 'block').addClass('slideDown');
+			$('.m_menu').show().addClass('slideDown');
 			$('body, html').css('overflow','hidden');
 		} else {
 			$(this).removeClass('close');
@@ -16,22 +16,23 @@ function buttonEvent(){
 	});
 
 	//메뉴 클릭이벤트
-	$('#menu .nav li a, #menu .title a').click(function(e){
-		setting();
-
+	$('#menu .nav li a').click(function(e){
 		var _index = $(this).parent('li').index();
-
-		if($(this).parent('li').index() == 0 || $(this).parent('h1').hasClass('title')) _index = 'main'
-		
-		var	_scrolling = _index == 'main' ? 0 : $('#section'+_index).offset().top.toFixed(0) - g.headH;
+		var	_scrolling = _index == 0 ? 0 : $('#section'+_index).offset().top.toFixed(0) - g.headH;
 
 		$(this).parent('li').addClass('on').siblings('li').removeClass('on');	
 		$('#menu .m_btn.close').trigger('click');
 
-		if(_index < 7 || _index == 'main') {
+		if(_index < 7) {
 			e.preventDefault();
 			scrollMove(_scrolling);
-		};
+		}
+	});
+
+	//로고 클릭 이벤트
+	$('#menu .title a').click(function(e) {
+		e.preventDefault();
+		scrollMove(0);
 	});
 
 	//비디오 닫기 이벤트
@@ -54,10 +55,10 @@ function buttonEvent(){
 	$('.faq_list a').click(function(e) {
 		e.preventDefault();
 		if($(this).hasClass('open')) {
-			$(this).removeClass('open').siblings('div').slideUp(300);
+			$(this).removeClass('open').siblings('div').slideUp({duration: 300, complete: function() { init(); }});
 		} else {
-			$(this).addClass('open').siblings('div').slideDown(300).parent('li').siblings('li').find('.open').removeClass('open').siblings('div').slideUp(300);
-		}		
+			$(this).addClass('open').siblings('div').slideDown({duration: 300, complete: function() { init(); }}).parent('li').siblings('li').find('.open').removeClass('open').siblings('div').slideUp(300);
+		}
 	});
 
 	//메인으로 가기 이벤트
@@ -71,17 +72,17 @@ function buttonEvent(){
 function scrollMove(_scrolling) {
 	g.isWheelMove = true;
 
-	var _duration = ($(window).scrollTop() - _scrolling) < 0 ? ($(window).scrollTop() - _scrolling) * -1 : $(window).scrollTop() - _scrolling;	
+	var _duration = ($(window).scrollTop() - _scrolling) < 0 ? ($(window).scrollTop() - _scrolling) * -1 : $(window).scrollTop() - _scrolling,
+		_delay = g.filter == 'pc' ? 0 : 500;
 
-	$('body, html').animate({
+
+	$('body, html').delay(_delay).animate({
 		scrollTop: _scrolling
 	}, {duration : Math.floor(_duration / 7), easing: 'easeInOutQuad', complete: function() {g.isWheelMove = false;}});	
 }
 
 //메인에서 스크롤 벗어 났을 때 이벤트
 function change(){
-	g.scrollTop = $(window).scrollTop();
-
 	if(g.scrollTop > 70) {
 		$('#menu').addClass('on');
 		$('#overlay').addClass('slideUp');
@@ -214,6 +215,8 @@ $(window).load(function() {
 })
 
 $(window).scroll(function(){
+	g.scrollTop = $(window).scrollTop();
+
 	change();
 	menuEvent();
 	movingEvent();
