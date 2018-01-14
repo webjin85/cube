@@ -216,7 +216,7 @@ $(window).load(function() {
 	//IE 버튼 스타일 변경
 	if ( (navigator.appName == 'Netscape' && navigator.userAgent.search('Trident') != -1) || (navigator.userAgent.toLowerCase().indexOf("msie") != -1) ) {
 		$('.btn').addClass('ie');
-	}
+	};
 })
 
 $(window).scroll(function(){

@@ -42,6 +42,12 @@ img { vertical-align: top; }
 
 #wrap { overflow: hidden; }
 
+#wrap.login #menu .lang { display: none; }
+#wrap.login { position: relative; background: url('../img/img-background.png') no-repeat 0 0; background-size: cover; }
+#wrap.login #section6 .footer .content { position: absolute; bottom: 0; padding-bottom: 24px; }
+#wrap.login #section6 .footer .addr, #wrap.login #section6 .footer .email, #wrap.login #section6 .footer .bottom .link a, #wrap.login #section6 .footer .content { color: #fff; }
+
+
 /* 전체 메뉴 */
 #menu { position: fixed; top: 0; left: 0; z-index: 9990; width: 100%; height: 120px; transition: background 300ms; }
 #menu .content { height: 120px; padding: 48px 100px 36px; }
