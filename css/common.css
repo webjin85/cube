@@ -145,6 +145,8 @@ img { vertical-align: top; }
 #section1 .img2 { display: block; width: 52.2%; height: auto; margin: 48px 0 0 13.5%; }
 #section1 .img3 { display: block; position: absolute; top: 181px; right: -29px; width: 46.9%; height: auto; }
 #section1 .subSection { position: relative; }
+#section1 .subSection.sec1_1 { min-height: 540px; }
+#section1 .subSection.sec1_3 { min-height: 570px; }
 #section1 .subSection .graph .caption { display: block; font-size: 1.125rem; line-height: 1.333em; text-align: center; }
 #section1 .subSection .graph .round { float: left; width: 44.1%; }
 #section1 .subSection .graph .round .img { position: relative; width: 280px; margin: -16px auto 0; text-align: center; font-size: 1.125rem; }
