@@ -32,8 +32,8 @@ li{ list-style:none; }
 table{ width:100%; border-collapse:collapse; border-spacing:0; }
 th, td{ border-collapse:collapse; }
 legend, caption, hr{ display:none; }
-a { text-decoration:none; color:#fff;}
-a:hover {  color:#fff;}
+a { cursor: pointer; text-decoration:none; color:#fff;}
+button { cursor: pointer; }
 img { vertical-align: top; }
 
 *{-webkit-box-sizing: border-box;
