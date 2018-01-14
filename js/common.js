@@ -159,6 +159,8 @@ function rodeMapEvent() {
 
 //각 섹션 위치 및 높이값
 function init() {
+	if($('#wrap.sub').length > 0) $('#wrap.sub').css('min-height', g.winH);
+	
 	//전체 섹션 위치값
 	for(var i=0; i<g.length; i++) {
 		g.topArr[i] = ( {t: $('#content > div:eq('+i+')').offset().top-g.headH});
