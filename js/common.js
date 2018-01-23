@@ -68,7 +68,9 @@ function buttonEvent(){
 	});
 
 	//dashboard user id 클릭 이벤트
-	$('')
+	$('#email').click(function() {
+		$(this).siblings('.dropDown').slideToggle(300);
+	});
 }
 
 //스크롤링 이벤트
@@ -179,6 +181,18 @@ function init() {
 		g.rodeMapArr[i] = ( {t: $('.rodeMap li').eq(i).offset().top});
 	}	
 }
+
+//레이어팝업 오픈
+function layerOpen(target) {
+	var popW = $(target).innerWidth(),
+		popH = $(target).innerHeight()
+
+	$(target).show().css({margin: (popH / 2 * -1) + 'px 0 0 ' + (popW / 2 * -1) + 'px'});
+};
+
+function layerClose(target) {
+	$(target).hide();
+};
 
 //글로벌 변수 세팅
 function setting() {

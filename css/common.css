@@ -429,12 +429,25 @@ img { vertical-align: top; }
 .inp_label + .btn1 { margin-top: 8px; }
 
 .tokens { margin-bottom: 64px; font-size: 2.250rem; line-height: 1.333em; color: #102131; }
-.tokens img { width: 34px; height: auto; vertical-align: middle; }
+.tokens img { width: 34px; height: auto; margin-top: 4px; }
 
 .user_area { position: absolute; top: 16px; right: 100px; }
 .user_area a { color: #126bd6; }
 .user_area #email { display: inline-block; padding-right: 28px; background: url('../img/arrow-dropdown-24.png') no-repeat right center; background-size: 24px auto; }
-.user_area .dropDown { display: none; }
+.user_area .dropDown { display: none; position: absolute; top: 28px; right: 0; z-index: 10; padding: 6px 16px; background: #fff; 
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	-ms-border-radius: 4px;
+	border-radius: 4px;
+	-webkit-box-shadow: 0 8px 8px 0 rgba(0, 0, 0, .24), 0 0 8px rgba(0, 0, 0, .12);
+	-moz-box-shadow: 0 8px 8px 0 rgba(0, 0, 0, .24), 0 0 8px rgba(0, 0, 0, .12);
+	-ms-box-shadow: 0 8px 8px 0 rgba(0, 0, 0, .24), 0 0 8px rgba(0, 0, 0, .12);
+	box-shadow: 0 8px 8px 0 rgba(0, 0, 0, .24), 0 0 8px rgba(0, 0, 0, .12);
+}
+.user_area .dropDown li { display: block; margin-bottom: 12px; }
+.user_area .dropDown li:last-child { margin-bottom: 0; }
+.user_area .dropDown li a { color: rgba(0, 0, 0, .6); }
+.user_area .dropDown li a:hover { text-decoration: underline; color: rgba(0, 0, 0, .87); }
 .user_area .kycauth { position: absolute; right: 0; bottom: -122px; padding: 6px 16px; border: 1px solid rgba(0, 0, 0, .6); color: rgba(0, 0, 0, .6); 
 	-webkit-border-radius: 18px;
 	-moz-border-radius: 18px;
@@ -525,6 +538,20 @@ img { vertical-align: top; }
 #video .movie-holder .btnClose:before { width: 26px; height: 2px; margin: -1px 0 0 -13px; }
 #video  iframe { vertical-align: top; }
 
+/* 팝업 */
+.popup { display: none; position: absolute; top: 60%; left: 50%; width: 50%; padding: 32px 48px; background: #fff;
+	-webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    border-radius: 4px;
+    -webkit-box-shadow: 0 8px 8px 0 rgba(0, 0, 0, .24), 0 0 8px rgba(0, 0, 0, .12);
+    -moz-box-shadow: 0 8px 8px 0 rgba(0, 0, 0, .24), 0 0 8px rgba(0, 0, 0, .12);
+    -ms-box-shadow: 0 8px 8px 0 rgba(0, 0, 0, .24), 0 0 8px rgba(0, 0, 0, .12);
+    box-shadow: 0 8px 8px 0 rgba(0, 0, 0, .24), 0 0 8px rgba(0, 0, 0, .12);
+}
+.popup .popTop { margin-bottom: 24px; padding-bottom: 16px; border-bottom: 1px solid rgba(0, 0, 0, .16); }
+.popup .popTop img { display: block; width: 32px; height: auto; margin: 0 auto; }
+.popup .popClose { overflow: hidden; position: absolute; top: 0; right: 0; width: 40px; height: 40px; background: url('../img/btn_delete.png') no-repeat center; background-size: 16px auto; text-indent: -999px; }
 
 /* 공통 */
 .content { position: relative; width: 1352px; margin: 0 auto; padding: 0 100px; transition: padding 300ms; }
@@ -906,6 +933,9 @@ img { vertical-align: top; }
 	#section6 .sns_list { display: block; width: 440px; margin: 0 auto; }
 	#section6 .sns_list li { margin-bottom: 20px; }
 
+	/* 팝업 */
+	.popup { width: 90%; padding: 16px; }
+
 	.user_area { right: 16px; }
 	
 	.content { padding: 0 24px; }
@@ -1114,22 +1144,25 @@ img { vertical-align: top; }
 	/* 서브 */
 	.sub2 { padding-top: 49px; }
 	.sub2 .sub_sec_title { font-size: 1.714rem; line-height: 1.333em; margin: 40px 0 8px; }
+	.sub2 #section6 .footer { margin-top: 20px; }
 
 	.token_box { width: 100%; padding-top: 26px; }
 	.token_box form { width: 100%; }
 	.token_box > p { display: none; }
 	.token_box > p.mt16 { display: block; color: rgba(0, 0, 0, .87); text-align: left; }
 	.tokens { margin-bottom: 24px; font-size: 1.143rem; line-height: 1.500em; }
-	.tokens img { width: 17px; }
+	.tokens img { width: 17px; margin-top: 3px; }
 
-	.user_area { overflow: hidden; position: static; padding-top: 26px; font-size: 0.857rem; line-height: 1.500em; }
-	.user_area .user { float: left; }
+	.user_area { position: static; padding-top: 26px; font-size: 0.857rem; line-height: 1.500em; }
+	.user_area:after { content: ''; display: table; clear: both; }
+	.user_area .user { float: left; position: relative; }
 	.user_area .kycauth { float: right; position: static; padding: 0; border: none; border-bottom: 1px solid rgba(0, 0, 0, .6); font-size: 1rem; 
 		-webkit-border-radius: 0; 
 		-moz-border-radius: 0;
 		-ms-border-radius: 0;
 		border-radius: 0;
 	}
+	.user_area .dropDown li a { font-size: 1rem; }
 
 	.inp_label label { float: none; display: block; margin-bottom: 8px; font-size: 1rem; line-height: 1.429em; }
 	.inp_label .inp1 { float: none; width: 100%; margin-bottom: 24px; }
