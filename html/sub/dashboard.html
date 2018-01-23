@@ -58,10 +58,24 @@
 	<!-- content -->
 	<div id="content">
 		<div class="content">
+			<div class="user_area">
+				<div class="user">
+					<span>Hello, </span>
+					<a href="#cube" id="email">anurocky@naver.com</a>
+					<ul class="dropDown">
+						<li><a href="/dashboard">My dashboard</a></li>
+						<li><a href="/changepassword">Change password</a></li>
+						<li><a href="/logout">Log out</a></li>
+					</ul>
+				</div>
+					
+				<a href="/kycauth" type="button" class="kycauth">KYC Auth</a>
+			</div>
+
 			<div class="token_box">
 				<h2 class="sec_title2">Your CUBE Tokens</h2>
 				<div class="tokens">
-					<img src="/img/favicon.png">
+					<img src="../../img/logo-cube-s.png">
 					<em class="balance">4008</em>
 					<span>Tokens</span>
 				</div>
@@ -72,45 +86,34 @@
 					<div class="inp_label">
 						<label for="amounteth">Amount of ETH</label>
 						<div class="inp1">
-							<input type="number" class="form-control" id="amounteth" min="0.01" max="24000">
+							<input type="number" class="form-control" id="amounteth" min="0.01" max="24000" value="1">
 						</div>
 					</div>
 					<div class="inp_label">
 						<label for="amountcube">Amount of CUBE</label>
 						<div class="inp1">
-							<input type="number" class="form-control" id="amountcube" min="10" max="24000000">
+							<input type="number" class="form-control" id="amountcube" min="10" max="24000000" value="1000">
 						</div>
 					</div>
 					<div class="inp_label">
 						<label for="bonus">Bonus Rate</label>
 						<div class="inp1">
-							<input type="input" class="form-control" id="bonus" value="" readonly="readonly">
+							<input type="input" class="form-control" id="bonus" value="50%" readonly="readonly">
 							<span class="bonusamount">500 CUBE</span>
 						</div>
 					</div>
 					<div class="inp_label">
 						<label for="total">Total CUBE</label>
 						<div class="inp1">
-							<input type="number" class="form-control" id="total" min="0" disabled="disabled">
+							<input type="number" class="form-control" id="total" min="0" disabled="disabled" value="1500">
 						</div>
 					</div>
 
 					<!-- Trigger the modal with a button -->
-					<button type="button" class="btn" data-toggle="modal" data-target="#myModal">
-						<div class="flipper">
-							<span class="button front">Contribute</span>
-							<span class="button back">Contribute Now</span>
-						</div>
-					</button>
-
-					<a href="/signup" class="btn">
-						<div class="flipper">
-							<span class="button front">Contribute</span>
-							<span class="button back">Contribute Now</span>
-						</div>
-					</a>
-
+					<button type="button" class="btn1" data-toggle="modal" data-target="#myModal">Proceed to Purchase</button>
 				</form>
+
+				<p class="mt16">We currently accept ETH as payment option</p>
 			</div>
 
 			<h3 class="sub_sec_title">Transaction History</h3>

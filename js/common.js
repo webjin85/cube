@@ -66,6 +66,9 @@ function buttonEvent(){
 		e.preventDefault();
 		scrollMove(0)
 	});
+
+	//dashboard user id 클릭 이벤트
+	$('')
 }
 
 //스크롤링 이벤트
